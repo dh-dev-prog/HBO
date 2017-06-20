@@ -1,8 +1,11 @@
 /* ------------------------------------ typo (font-size 16px)
 */
-
+@font-face {
+  font-family: "Gotham";
+  src: url('sass/components/GothamSSm-Book.ttf') format('truetype');
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gotham", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;

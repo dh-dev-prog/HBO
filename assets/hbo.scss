@@ -48,6 +48,7 @@ a {
   text-align: center;
 }
 .header__logo {
+  position: relative;
   float: left;
   width: calc(100% - 120px);
   height: 60px;
@@ -59,17 +60,41 @@ a {
   }
 }
 
+/* ------------------------------------ ion icons
+*/
+
 .ion-ios-search-strong {
-  font-size: 1.3rem;
+  font-size: 20px;
 }
 .ion-ios-circle-outline {
-  font-size: 1.85rem;
-  position: relative;
-  right: 24px;
-  top: 4px;
+  font-size: 1.8rem;
+  position: absolute;
+  right: 18px;
+  top: 1px;
 }
 .ion-navicon {
   font-size: 2.3rem;
+}
+.ion-ios-close-empty {
+  font-size: 3rem;
+}
+
+/* ------------------------------------ dropdown nav
+*/
+
+.dropdown {
+  background-color: $background_color_elements;
+  border-bottom: 1px solid $border_color;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  nav {
+    padding: 1.4em;
+    a {
+      padding: .6em 0;
+      color: fade-in($text_color, 0.3)
+    }
+  }
 }
 
 /* ----------------------------- STATES

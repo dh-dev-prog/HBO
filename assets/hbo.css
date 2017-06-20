@@ -65,8 +65,11 @@ table {
 
 /* ------------------------------------ typo (font-size 16px)
 */
+@font-face {
+  font-family: "Gotham";
+  src: url("sass/components/GothamSSm-Book.ttf") format("truetype"); }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gotham", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400; }
@@ -125,7 +128,7 @@ a {
 .header {
   width: 100vw;
   height: 60px;
-  border-bottom: 1px solid #1f1f1f; }
+  border-bottom: 1px solid #292929; }
 
 .header__icon {
   display: block;
@@ -136,6 +139,7 @@ a {
   text-align: center; }
 
 .header__logo {
+  position: relative;
   float: left;
   width: calc(100% - 120px);
   height: 60px;
@@ -144,17 +148,36 @@ a {
     width: 65px;
     height: 60px; }
 
+/* ------------------------------------ ion icons
+*/
 .ion-ios-search-strong {
-  font-size: 1.3rem; }
+  font-size: 20px; }
 
 .ion-ios-circle-outline {
-  font-size: 1.85rem;
-  position: relative;
-  right: 24px;
-  top: 4px; }
+  font-size: 1.8rem;
+  position: absolute;
+  right: 18px;
+  top: 1px; }
 
 .ion-navicon {
   font-size: 2.3rem; }
+
+.ion-ios-close-empty {
+  font-size: 3rem; }
+
+/* ------------------------------------ dropdown nav
+*/
+.dropdown {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #292929;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .dropdown nav {
+    padding: 1.4em; }
+    .dropdown nav a {
+      padding: .6em 0;
+      color: rgba(255, 255, 255, 0.78); }
 
 /* ----------------------------- STATES
 */
