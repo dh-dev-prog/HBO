@@ -105,10 +105,6 @@ cite, em {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.header__icon, .header__logo img {
-  min-width: 48px;
-  min-height: 48px; }
-
 /* ----------------------------- BASE
 */
 body {
@@ -127,26 +123,26 @@ a {
 */
 .header {
   width: 100vw;
-  height: 60px;
+  height: 70px;
   border-bottom: 1px solid #292929; }
 
 .header__icon {
   display: block;
   float: left;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 55px;
+  height: 70px;
+  line-height: 70px;
   text-align: center; }
 
 .header__logo {
   position: relative;
   float: left;
-  width: calc(100% - 120px);
-  height: 60px;
+  width: calc(100% - 110px);
+  height: 70px;
   text-align: center; }
   .header__logo img {
     width: 65px;
-    height: 60px; }
+    height: 70px; }
 
 /* ------------------------------------ ion icons
 */
@@ -156,7 +152,7 @@ a {
 .ion-ios-circle-outline {
   font-size: 1.8rem;
   position: absolute;
-  right: 18px;
+  right: 15px;
   top: 1px; }
 
 .ion-navicon {
@@ -165,19 +161,41 @@ a {
 .ion-ios-close-empty {
   font-size: 3rem; }
 
-/* ------------------------------------ dropdown nav
+/* ------------------------------------ menu
 */
-.dropdown {
+.menu {
+  position: relative;
+  height: 254px;
   background-color: #1f1f1f;
-  border-bottom: 1px solid #292929;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-  .dropdown nav {
-    padding: 1.4em; }
-    .dropdown nav a {
-      padding: .6em 0;
-      color: rgba(255, 255, 255, 0.78); }
+  border-bottom: 1px solid #292929; }
+  .menu .menu__block, .menu .menu__block_left, .menu .menu__block_right, .menu .menu__block_middle {
+    padding: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .menu .menu__block_left {
+    float: left;
+    width: 62.5%; }
+  .menu .menu__block_right {
+    float: left;
+    width: 37.5%;
+    min-height: 254px;
+    border-left: 1px solid #292929;
+    text-transform: capitalize;
+    font-size: 10px; }
+  .menu .menu__block_middle {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .menu .menu__link, .menu .menu__link_right {
+    padding: .6em 0;
+    color: rgba(255, 255, 255, 0.88); }
+  .menu .menu__link_right {
+    color: rgba(255, 255, 255, 0.48); }
+  .menu .menu__link_feat {
+    padding-top: 1em;
+    font-weight: 100;
+    color: #caad2d; }
 
 /* ----------------------------- STATES
 */
