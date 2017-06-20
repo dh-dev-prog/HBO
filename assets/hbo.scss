@@ -27,7 +27,6 @@ a {
     color: $text_hover_color
   }
 }
-$square: 65px;
 
 /* ----------------------------- LAYOUT
 */
@@ -38,24 +37,24 @@ $square: 65px;
   width: 100vw;
   height: 70px;
   border-bottom: 1px solid $border_color;
-}
-.header__icon {
-  display: block;
-  float:left;
-  width: 55px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-}
-.header__logo {
-  position: relative;
-  float: left;
-  width: calc(100% - 110px);
-  height: 70px;
-  text-align: center;
-  img {
-    width: 65px;
+  .header__icon {
+    display: block;
+    float:left;
+    width: 55px;
     height: 70px;
+    line-height: 70px;
+    text-align: center;
+  }
+  .header__logo {
+    position: relative;
+    float: left;
+    width: calc(100% - 2 * 55px);
+    height: 70px;
+    text-align: center;
+    img {
+      width: 65px;
+      height: 70px;
+    }
   }
 }
 
@@ -86,7 +85,6 @@ $square: 65px;
   height: 254px;
   background-color: $background_color_elements;
   border-bottom: 1px solid $border_color;
-
   .menu__block {
     padding: 16px;
     font-size: 12px;
@@ -127,6 +125,12 @@ $square: 65px;
     font-weight: 100;
     color: #caad2d;
   }
+}
+
+.search {
+  background-color: $background_color_elements;
+  border-bottom: 1px solid $border_color;
+  min-height: 50px;
 }
 
 
