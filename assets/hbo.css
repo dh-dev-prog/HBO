@@ -1,0 +1,198 @@
+/* ------------------------------------ reset
+*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   2. v2.0 | 20110126 License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ------------------------------------ clearfix
+*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table; }
+
+.cleafix::after {
+  clear: both; }
+
+.clearfix {
+  clear: both;
+  *zoom: 1; }
+
+/* ------------------------------------ typo (font-size 16px)
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 24px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 13px; }
+
+strong {
+  font-weight: 700; }
+
+cite, em {
+  font-style: italic; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');*/
+.header__icon, .header__logo img {
+  min-width: 48px;
+  min-height: 48px; }
+
+/* ----------------------------- BASE
+*/
+body {
+  background-color: #0a0a0a; }
+
+a {
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.48); }
+  a:hover {
+    color: rgba(255, 255, 255, 0.68); }
+
+/* ----------------------------- LAYOUT
+*/
+/* ----------------------------- MODULES
+*/
+.header {
+  width: 100vw;
+  height: 60px;
+  border-bottom: 1px solid #1f1f1f; }
+
+.header__icon {
+  display: block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center; }
+
+.header__logo {
+  float: left;
+  width: calc(100% - 120px);
+  height: 60px;
+  text-align: center; }
+  .header__logo img {
+    width: 65px;
+    height: 60px; }
+
+.ion-ios-search-strong {
+  font-size: 1.3rem; }
+
+.ion-ios-circle-outline {
+  font-size: 1.85rem;
+  position: relative;
+  right: 24px;
+  top: 4px; }
+
+.ion-navicon {
+  font-size: 2.3rem; }
+
+/* ----------------------------- STATES
+*/
+.is_hidden {
+  display: none; }
+
+.is_active_block {
+  display: block; }
+
+.is_active_inline {
+  display: inline; }
+
+/* ----------------------------- THEME
+*/
+/* ----------------------------- LIMBO
+
+.nav {
+  .nav__item {
+    display: inline-block;
+    .nav__link {
+      padding: 0.2rem;
+      font: {
+        family: Gotham, sans-serif;
+        size: 0.7rem;
+      }
+      &:hover {
+        color: $nav_link_hover_color;
+      }
+    }
+  }
+}
+.nav__top {
+  float: right;
+  margin-right: 50px;
+  color: $nav_link_color;
+  @extend .nav;
+}
+
+*/
+
+/*# sourceMappingURL=hbo.css.map */

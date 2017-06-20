@@ -1,0 +1,122 @@
+
+// ------------------------------ SASS
+
+// ------------------------------------ helpers
+
+@import "sass/helpers/reset";
+@import "sass/helpers/clearfix";
+@import "sass/helpers/typesize";
+@import "sass/helpers/fonts";
+@import "sass/helpers/variables";
+@import "sass/helpers/box-sizing";
+@import "sass/components/icons";
+
+// ------------------------------------ placeholders
+%min {
+  min-width: 48px;
+  min-height: 48px;
+}
+// ------------------------------------ mixins
+
+
+
+/* ----------------------------- BASE
+*/
+
+body {
+  background-color: $bg_color;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: $link_color;
+  &:hover {
+    color: $link_hover_color
+  }
+}
+
+/* ----------------------------- LAYOUT
+*/
+/* ----------------------------- MODULES
+*/
+
+.header {
+  width: 100vw;
+  height: 60px;
+  border-bottom: 1px solid $color;
+}
+.header__icon {
+  display: block;
+  float:left;
+  @extend %min;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.header__logo {
+  float: left;
+  width: calc(100% - 120px);
+  height: 60px;
+  text-align: center;
+  img {
+    @extend %min;
+    width: 65px;
+    height: 60px;
+  }
+}
+
+.ion-ios-search-strong {
+  font-size: 1.3rem;
+}
+.ion-ios-circle-outline {
+  font-size: 1.85rem;
+  position: relative;
+  right: 24px;
+  top: 4px;
+}
+.ion-navicon {
+  font-size: 2.3rem;
+}
+
+/* ----------------------------- STATES
+*/
+
+.is_hidden {
+  display: none;
+}
+.is_active_block {
+  display: block;
+}
+.is_active_inline {
+  display: inline
+}
+
+/* ----------------------------- THEME
+*/
+
+/* ----------------------------- LIMBO
+
+.nav {
+  .nav__item {
+    display: inline-block;
+    .nav__link {
+      padding: 0.2rem;
+      font: {
+        family: Gotham, sans-serif;
+        size: 0.7rem;
+      }
+      &:hover {
+        color: $nav_link_hover_color;
+      }
+    }
+  }
+}
+.nav__top {
+  float: right;
+  margin-right: 50px;
+  color: $nav_link_color;
+  @extend .nav;
+}
+
+*/
