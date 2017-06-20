@@ -9,29 +9,22 @@
 @import "sass/helpers/fonts";
 @import "sass/helpers/variables";
 @import "sass/helpers/box-sizing";
+@import "sass/helpers/placeholders";
+@import "sass/helpers/mixins";
 @import "sass/components/icons";
-
-// ------------------------------------ placeholders
-%min {
-  min-width: 48px;
-  min-height: 48px;
-}
-// ------------------------------------ mixins
-
-
 
 /* ----------------------------- BASE
 */
 
 body {
-  background-color: $bg_color;
+  background-color: $background_color;
 }
 a {
   display: block;
   text-decoration: none;
-  color: $link_color;
+  color: $text_color;
   &:hover {
-    color: $link_hover_color
+    color: $text_hover_color
   }
 }
 
@@ -43,7 +36,7 @@ a {
 .header {
   width: 100vw;
   height: 60px;
-  border-bottom: 1px solid $color;
+  border-bottom: 1px solid $border_color;
 }
 .header__icon {
   display: block;
