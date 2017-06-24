@@ -105,6 +105,11 @@ cite, em {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+img, video, embed, object {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
 /* ----------------------------- BASE
 */
 body {
@@ -123,24 +128,24 @@ a {
 */
 .header {
   width: 100vw;
-  height: 70px;
+  height: 69px;
   border-bottom: 1px solid #292929; }
   .header .header__icon {
     display: block;
     float: left;
     width: 55px;
-    height: 70px;
-    line-height: 70px;
+    height: 69px;
+    line-height: 69px;
     text-align: center; }
   .header .header__logo {
     position: relative;
     float: left;
     width: calc(100% - 2 * 55px);
-    height: 70px;
-    text-align: center; }
+    height: 69px; }
     .header .header__logo img {
       width: 65px;
-      height: 70px; }
+      height: 69px;
+      margin: 0 auto; }
 
 /* ------------------------------------ ion icons
 */
@@ -195,10 +200,34 @@ a {
     font-weight: 100;
     color: #caad2d; }
 
+/* ------------------------------------ search
+*/
 .search {
   background-color: #1f1f1f;
   border-bottom: 1px solid #292929;
-  min-height: 50px; }
+  padding: 16px;
+  clear: both; }
+  .search .search__input {
+    width: 100%;
+    padding: 4px 0;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #292929;
+    background: transparent;
+    font-size: 1.05rem;
+    letter-spacing: .01rem;
+    color: rgba(255, 255, 255, 0.68);
+    outline: 0;
+    transition: border-color 0.15s linear; }
+    .search .search__input:focus {
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: #484848; }
+
+/* ------------------------------------ hero
+*/
+.hero {
+  padding: 8px; }
 
 /* ----------------------------- STATES
 */
@@ -214,29 +243,6 @@ a {
 /* ----------------------------- THEME
 */
 /* ----------------------------- LIMBO
-
-.nav {
-  .nav__item {
-    display: inline-block;
-    .nav__link {
-      padding: 0.2rem;
-      font: {
-        family: Gotham, sans-serif;
-        size: 0.7rem;
-      }
-      &:hover {
-        color: $nav_link_hover_color;
-      }
-    }
-  }
-}
-.nav__top {
-  float: right;
-  margin-right: 50px;
-  color: $nav_link_color;
-  @extend .nav;
-}
-
 */
 
 /*# sourceMappingURL=hbo.css.map */

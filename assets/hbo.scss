@@ -11,6 +11,7 @@
 @import "sass/helpers/box-sizing";
 @import "sass/helpers/placeholders";
 @import "sass/helpers/mixins";
+@import "sass/helpers/images";
 @import "sass/components/icons";
 
 /* ----------------------------- BASE
@@ -24,7 +25,7 @@ a {
   text-decoration: none;
   color: $text_color;
   &:hover {
-    color: $text_hover_color
+    color: $text_color_light;
   }
 }
 
@@ -35,25 +36,25 @@ a {
 
 .header {
   width: 100vw;
-  height: 70px;
+  height: $header_height;
   border-bottom: 1px solid $border_color;
   .header__icon {
     display: block;
-    float:left;
+    float: left;
     width: 55px;
-    height: 70px;
-    line-height: 70px;
+    height: $header_height;
+    line-height: $header_height;
     text-align: center;
   }
   .header__logo {
     position: relative;
     float: left;
     width: calc(100% - 2 * 55px);
-    height: 70px;
-    text-align: center;
+    height: $header_height;
     img {
       width: 65px;
-      height: 70px;
+      height: $header_height;
+      margin: 0 auto;
     }
   }
 }
@@ -127,12 +128,38 @@ a {
   }
 }
 
+/* ------------------------------------ search
+*/
 .search {
   background-color: $background_color_elements;
   border-bottom: 1px solid $border_color;
-  min-height: 50px;
+  padding: 16px;
+  clear: both; //clear floats before so its style dont bleed onto the top header - background-color
+  .search__input {
+    width: 100%;
+    padding: 4px 0;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $border_color;
+    background: transparent;
+    font-size: 1.05rem;
+    letter-spacing: .01rem;
+    color: $text_color_light;
+    outline: 0;
+    transition: border-color 0.15s linear;
+    &:focus {
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: $border_color_light;
+    }
+  }
 }
+/* ------------------------------------ hero
+*/
 
+.hero {
+  padding: 8px;
+}
 
 /* ----------------------------- STATES
 */
@@ -151,27 +178,4 @@ a {
 */
 
 /* ----------------------------- LIMBO
-
-.nav {
-  .nav__item {
-    display: inline-block;
-    .nav__link {
-      padding: 0.2rem;
-      font: {
-        family: Gotham, sans-serif;
-        size: 0.7rem;
-      }
-      &:hover {
-        color: $nav_link_hover_color;
-      }
-    }
-  }
-}
-.nav__top {
-  float: right;
-  margin-right: 50px;
-  color: $nav_link_color;
-  @extend .nav;
-}
-
 */

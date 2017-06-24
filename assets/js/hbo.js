@@ -22,6 +22,8 @@ function initPage(){
     iconCircle.classList.toggle('ion-ios-circle-outline');
     iconSearch.classList.toggle('ion-ios-close-empty');
     search.classList.toggle('is_hidden');
+    search.querySelector('.search__input').value = '';
+    search.querySelector('.search__input').focus();
   }
   function searchClose() {
     iconSearch.classList.remove('ion-ios-close-empty');
