@@ -3,7 +3,8 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    2. v2.0 | 20110126 License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Muli:600|Roboto:300|Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
 @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html, body, div, span, applet, object, iframe,
@@ -69,7 +70,7 @@ table {
   font-family: "Gotham";
   src: url("sass/components/GothamSSm-Book.ttf") format("truetype"); }
 body {
-  font-family: "Gotham", Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400; }
@@ -113,7 +114,8 @@ img, video, embed, object {
 /* ----------------------------- BASE
 */
 body {
-  background-color: #0a0a0a; }
+  background-color: #0a0a0a;
+  color: rgba(255, 255, 255, 0.48); }
 
 a {
   display: block;
@@ -121,6 +123,10 @@ a {
   color: rgba(255, 255, 255, 0.48); }
   a:hover {
     color: rgba(255, 255, 255, 0.68); }
+
+.menu .menu__link_feat, .hero .hero__text .hero__link {
+  font-weight: 100;
+  color: #caad2d; }
 
 /* ----------------------------- LAYOUT
 */
@@ -196,9 +202,7 @@ a {
   .menu .menu__link_right {
     color: rgba(255, 255, 255, 0.48); }
   .menu .menu__link_feat {
-    padding-top: 1em;
-    font-weight: 100;
-    color: #caad2d; }
+    padding-top: 1em; }
 
 /* ------------------------------------ search
 */
@@ -226,8 +230,47 @@ a {
 
 /* ------------------------------------ hero
 */
-.hero {
+.hero__wrapper {
   padding: 8px; }
+
+.hero {
+  background-color: #1f1f1f; }
+  .hero .hero__text {
+    padding: 16px 12px;
+    font-size: 0.8rem; }
+    .hero .hero__text .hero__infos {
+      padding-bottom: 1px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-variant: small-caps;
+      letter-spacing: 0.02em; }
+    .hero .hero__text .hero__ep-title {
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      font-weight: 300;
+      letter-spacing: 0.021em;
+      color: #fff; }
+    .hero .hero__text .hero__synop {
+      padding: 16px 0;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.68); }
+    .hero .hero__text .hero__link {
+      text-align: right; }
+      .hero .hero__text .hero__link .hero__link_text {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.62rem;
+        letter-spacing: 0.12rem;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        text-transform: uppercase; }
+      .hero .hero__text .hero__link .hero__link_arrow {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.2em;
+        line-height: 1.5rem;
+        height: 1.5rem; }
 
 /* ----------------------------- STATES
 */

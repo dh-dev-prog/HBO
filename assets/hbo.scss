@@ -19,6 +19,7 @@
 
 body {
   background-color: $background_color;
+  color: $text_color;
 }
 a {
   display: block;
@@ -27,6 +28,10 @@ a {
   &:hover {
     color: $text_color_light;
   }
+}
+%link-feat {
+  font-weight: 100;
+  color: #caad2d;
 }
 
 /* ----------------------------- LAYOUT
@@ -123,8 +128,7 @@ a {
   }
   .menu__link_feat {
     padding-top: 1em;
-    font-weight: 100;
-    color: #caad2d;
+    @extend %link-feat;
   }
 }
 
@@ -156,10 +160,57 @@ a {
 }
 /* ------------------------------------ hero
 */
-
-.hero {
+.hero__wrapper {
   padding: 8px;
 }
+.hero {
+  background-color: $background_color_elements;
+  .hero__text {
+    padding: 16px 12px;
+    font-size: 0.8rem;
+    .hero__infos {
+      padding-bottom: 1px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-variant: small-caps;
+      letter-spacing: 0.02em;
+    }
+    .hero__ep-title {
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      font-weight: 300;
+      letter-spacing: 0.021em;
+      color: #fff;
+    }
+    .hero__synop {
+      padding: 16px 0;
+      font-weight: 300;
+      color: $text_color_light;
+    }
+    .hero__link {
+      @extend %link-feat;
+      text-align: right;
+      .hero__link_text {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.62rem;
+        letter-spacing: 0.12rem;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        text-transform: uppercase;
+      }
+      .hero__link_arrow {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.2em;
+        line-height: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
 
 /* ----------------------------- STATES
 */
