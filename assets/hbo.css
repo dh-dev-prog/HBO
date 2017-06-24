@@ -69,6 +69,9 @@ table {
 @font-face {
   font-family: "Gotham";
   src: url("sass/components/GothamSSm-Book.ttf") format("truetype"); }
+html {
+  font-size: 16px; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -106,6 +109,18 @@ cite, em {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.menu .menu__link_feat, .hero .hero__text .hero__link, .schedule .schedule__header {
+  font-weight: 100;
+  color: #caad2d; }
+
+.hero .hero__text .hero__header, .schedule .schedule__header, .schedule .schedule__time {
+  text-transform: uppercase;
+  font-variant: small-caps;
+  letter-spacing: 0.02em; }
+
+.hero .hero__text .hero__header, .schedule .schedule__header {
+  font-weight: 500; }
+
 img, video, embed, object {
   display: block;
   max-width: 100%;
@@ -113,6 +128,9 @@ img, video, embed, object {
 
 /* ----------------------------- BASE
 */
+html {
+  font-size: 16px; }
+
 body {
   background-color: #0a0a0a;
   color: rgba(255, 255, 255, 0.48); }
@@ -124,12 +142,11 @@ a {
   a:hover {
     color: rgba(255, 255, 255, 0.68); }
 
-.menu .menu__link_feat, .hero .hero__text .hero__link {
-  font-weight: 100;
-  color: #caad2d; }
-
 /* ----------------------------- LAYOUT
 */
+.wrapper_8 {
+  padding: 8px; }
+
 /* ----------------------------- MODULES
 */
 .header {
@@ -230,21 +247,14 @@ a {
 
 /* ------------------------------------ hero
 */
-.hero__wrapper {
-  padding: 8px; }
-
 .hero {
   background-color: #1f1f1f; }
   .hero .hero__text {
     padding: 16px 12px;
     font-size: 0.8rem; }
-    .hero .hero__text .hero__infos {
+    .hero .hero__text .hero__header {
       padding-bottom: 1px;
-      font-size: 0.65rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-variant: small-caps;
-      letter-spacing: 0.02em; }
+      font-size: 0.65rem; }
     .hero .hero__text .hero__ep-title {
       font-size: 1.1rem;
       text-transform: capitalize;
@@ -271,6 +281,28 @@ a {
         font-size: 1.2em;
         line-height: 1.5rem;
         height: 1.5rem; }
+
+/* ------------------------------------ schedule
+*/
+.schedule {
+  padding: 16px 12px; }
+  .schedule .schedule__item {
+    padding-top: 12px; }
+  .schedule .schedule__header {
+    font-size: 0.7rem; }
+  .schedule .schedule__time {
+    font-size: 0.8rem;
+    font-weight: 300; }
+    .schedule .schedule__time .schedule__time_sup {
+      position: relative;
+      top: -0.27em;
+      font-size: 0.7em; }
+  .schedule .schedule__title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #292929;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.68); }
 
 /* ----------------------------- STATES
 */

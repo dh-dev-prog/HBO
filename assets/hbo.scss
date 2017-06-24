@@ -17,6 +17,10 @@
 /* ----------------------------- BASE
 */
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: $background_color;
   color: $text_color;
@@ -29,13 +33,14 @@ a {
     color: $text_color_light;
   }
 }
-%link-feat {
-  font-weight: 100;
-  color: #caad2d;
-}
 
 /* ----------------------------- LAYOUT
 */
+
+.wrapper_8 {
+  padding: 8px;
+}
+
 /* ----------------------------- MODULES
 */
 
@@ -128,7 +133,7 @@ a {
   }
   .menu__link_feat {
     padding-top: 1em;
-    @extend %link-feat;
+    @extend %feature;
   }
 }
 
@@ -160,21 +165,16 @@ a {
 }
 /* ------------------------------------ hero
 */
-.hero__wrapper {
-  padding: 8px;
-}
+
 .hero {
   background-color: $background_color_elements;
   .hero__text {
     padding: 16px 12px;
     font-size: 0.8rem;
-    .hero__infos {
+    .hero__header {
+      @extend %small-caps-header;
       padding-bottom: 1px;
       font-size: 0.65rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-variant: small-caps;
-      letter-spacing: 0.02em;
     }
     .hero__ep-title {
       font-size: 1.1rem;
@@ -189,7 +189,7 @@ a {
       color: $text_color_light;
     }
     .hero__link {
-      @extend %link-feat;
+      @extend %feature;
       text-align: right;
       .hero__link_text {
         display: inline-block;
@@ -211,6 +211,37 @@ a {
   }
 }
 
+/* ------------------------------------ schedule
+*/
+
+.schedule {
+  padding: 16px 12px;
+  .schedule__item {
+    padding-top: 12px;
+  }
+  .schedule__header {
+    @extend %feature;
+    @extend %small-caps-header;
+    font-size: 0.7rem;
+  }
+  .schedule__time {
+    font-size: 0.8rem;
+    font-weight: 300;
+    @extend %small-caps;
+    .schedule__time_sup {
+      position: relative;
+      top: -0.27em;
+      font-size: 0.7em;
+    }
+  }
+  .schedule__title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid $border_color;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: $text_color_light;
+  }
+}
 
 /* ----------------------------- STATES
 */
