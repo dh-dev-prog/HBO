@@ -5,7 +5,7 @@
 
 @import "sass/helpers/reset";
 @import "sass/helpers/clearfix";
-@import "sass/helpers/typesize";
+@import "sass/helpers/typo";
 @import "sass/helpers/fonts";
 @import "sass/helpers/variables";
 @import "sass/helpers/box-sizing";
@@ -20,7 +20,6 @@
 html {
   font-size: 16px;
 }
-
 body {
   background-color: $background_color;
   color: $text_color;
@@ -79,7 +78,7 @@ a {
   font-size: 1.8rem;
   position: absolute;
   right: 15px;
-  top: 1px;
+  top: 0px;
 }
 .ion-navicon {
   font-size: 2.3rem;
@@ -188,26 +187,30 @@ a {
       font-weight: 300;
       color: $text_color_light;
     }
-    .hero__link {
-      @extend %feature;
-      text-align: right;
-      .hero__link_text {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 0.62rem;
-        letter-spacing: 0.12rem;
-        line-height: 1.5rem;
-        height: 1.5rem;
-        text-transform: uppercase;
-      }
-      .hero__link_arrow {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 1.2em;
-        line-height: 1.5rem;
-        height: 1.5rem;
-      }
-    }
+  }
+}
+
+/* ------------------------------------ feature__link
+*/
+
+.feature__link {
+  @extend %feature;
+  text-align: right;
+  .feature__link_text {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.62rem;
+    letter-spacing: 0.12rem;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    text-transform: uppercase;
+  }
+  .feature__link_arrow {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2em;
+    line-height: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -216,31 +219,41 @@ a {
 
 .schedule {
   padding: 16px 12px;
-  .schedule__item {
-    padding-top: 12px;
-  }
   .schedule__header {
     @extend %feature;
     @extend %small-caps-header;
     font-size: 0.7rem;
   }
-  .schedule__time {
-    font-size: 0.8rem;
-    font-weight: 300;
-    @extend %small-caps;
-    .schedule__time_sup {
-      position: relative;
-      top: -0.27em;
-      font-size: 0.7em;
-    }
-  }
-  .schedule__title {
-    padding-bottom: 12px;
+  .schedule__item {
+    padding: 12px 0;
     border-bottom: 1px solid $border_color;
     font-size: 0.8rem;
     font-weight: 300;
-    color: $text_color_light;
+    .schedule__time {
+      @extend %small-caps;
+      font-size: 1em;
+      .schedule__time_sup {
+        position: relative;
+        top: -0.27em;
+        font-size: 0.7em;
+      }
+    }
+    .schedule__title {
+      font-size: 1em;
+      color: $text_color_light;
+    }
   }
+  div:nth-last-of-type(2){
+    border-bottom-color: transparent; //last-of-type doesn't work on class so can't use it directly on .schedule__item
+  }
+}
+
+/* ------------------------------------ hall
+*/
+
+.hall {
+  padding: 0 16px;
+  border-top: 1px solid $border_color;
 }
 
 /* ----------------------------- STATES

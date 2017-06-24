@@ -3,7 +3,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    2. v2.0 | 20110126 License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Muli:600|Roboto:300|Varela+Round");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
 @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -66,9 +65,6 @@ table {
 
 /* ------------------------------------ typo (font-size 16px)
 */
-@font-face {
-  font-family: "Gotham";
-  src: url("sass/components/GothamSSm-Book.ttf") format("truetype"); }
 html {
   font-size: 16px; }
 
@@ -109,11 +105,11 @@ cite, em {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.menu .menu__link_feat, .hero .hero__text .hero__link, .schedule .schedule__header {
+.menu .menu__link_feat, .feature__link, .schedule .schedule__header {
   font-weight: 100;
   color: #caad2d; }
 
-.hero .hero__text .hero__header, .schedule .schedule__header, .schedule .schedule__time {
+.hero .hero__text .hero__header, .schedule .schedule__header, .schedule .schedule__item .schedule__time {
   text-transform: uppercase;
   font-variant: small-caps;
   letter-spacing: 0.02em; }
@@ -179,7 +175,7 @@ a {
   font-size: 1.8rem;
   position: absolute;
   right: 15px;
-  top: 1px; }
+  top: 0px; }
 
 .ion-navicon {
   font-size: 2.3rem; }
@@ -265,44 +261,54 @@ a {
       padding: 16px 0;
       font-weight: 300;
       color: rgba(255, 255, 255, 0.68); }
-    .hero .hero__text .hero__link {
-      text-align: right; }
-      .hero .hero__text .hero__link .hero__link_text {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 0.62rem;
-        letter-spacing: 0.12rem;
-        line-height: 1.5rem;
-        height: 1.5rem;
-        text-transform: uppercase; }
-      .hero .hero__text .hero__link .hero__link_arrow {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 1.2em;
-        line-height: 1.5rem;
-        height: 1.5rem; }
+
+/* ------------------------------------ feature__link
+*/
+.feature__link {
+  text-align: right; }
+  .feature__link .feature__link_text {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.62rem;
+    letter-spacing: 0.12rem;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    text-transform: uppercase; }
+  .feature__link .feature__link_arrow {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2em;
+    line-height: 1.5rem;
+    height: 1.5rem; }
 
 /* ------------------------------------ schedule
 */
 .schedule {
   padding: 16px 12px; }
-  .schedule .schedule__item {
-    padding-top: 12px; }
   .schedule .schedule__header {
     font-size: 0.7rem; }
-  .schedule .schedule__time {
-    font-size: 0.8rem;
-    font-weight: 300; }
-    .schedule .schedule__time .schedule__time_sup {
-      position: relative;
-      top: -0.27em;
-      font-size: 0.7em; }
-  .schedule .schedule__title {
-    padding-bottom: 12px;
+  .schedule .schedule__item {
+    padding: 12px 0;
     border-bottom: 1px solid #292929;
     font-size: 0.8rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.68); }
+    font-weight: 300; }
+    .schedule .schedule__item .schedule__time {
+      font-size: 1em; }
+      .schedule .schedule__item .schedule__time .schedule__time_sup {
+        position: relative;
+        top: -0.27em;
+        font-size: 0.7em; }
+    .schedule .schedule__item .schedule__title {
+      font-size: 1em;
+      color: rgba(255, 255, 255, 0.68); }
+  .schedule div:nth-last-of-type(2) {
+    border-bottom-color: transparent; }
+
+/* ------------------------------------ hall
+*/
+.hall {
+  padding: 0 16px;
+  border-top: 1px solid #292929; }
 
 /* ----------------------------- STATES
 */
