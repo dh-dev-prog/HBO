@@ -28,6 +28,7 @@ a {
   display: block;
   text-decoration: none;
   color: $text_color;
+  cursor: pointer;
   &:hover {
     color: $text_color_light;
   }
@@ -40,31 +41,35 @@ a {
   padding: 8px;
 }
 
+.light-bg {
+  background-color: $background_color_elements;
+}
+
 /* ----------------------------- MODULES
 */
 
 .header {
   width: 100vw;
   height: $header_height;
-  border-bottom: 1px solid $border_color;
-  .header__icon {
-    display: block;
-    float: left;
-    width: 55px;
+  border-bottom: 1px solid $border_ultra_light;
+}
+.header__icon {
+  display: block;
+  float: left;
+  width: 55px;
+  height: $header_height;
+  line-height: $header_height;
+  text-align: center;
+}
+.header__logo {
+  position: relative;
+  float: left;
+  width: calc(100% - 2 * 55px);
+  height: $header_height;
+  img {
+    width: 65px;
     height: $header_height;
-    line-height: $header_height;
-    text-align: center;
-  }
-  .header__logo {
-    position: relative;
-    float: left;
-    width: calc(100% - 2 * 55px);
-    height: $header_height;
-    img {
-      width: 65px;
-      height: $header_height;
-      margin: 0 auto;
-    }
+    margin: 0 auto;
   }
 }
 
@@ -95,45 +100,44 @@ a {
   height: 254px;
   background-color: $background_color_elements;
   border-bottom: 1px solid $border_color;
-  .menu__block {
-    padding: 16px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .menu__block_left {
-    @extend .menu__block;
-    float: left;
-    width: 62.5%;
-  }
-  .menu__block_right {
-    @extend .menu__block;
-    float: left;
-    width: 37.5%;
-    min-height: 254px;
-    border-left: 1px solid $border_color;
-    text-transform: capitalize;
-    font-size: 10px;
-  }
-  .menu__block_middle {
-    @extend .menu__block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  .menu__link {
-    padding: .6em 0;
-    $amount: .4;
-    color: fade-in($text_color, $amount);
-  }
-  .menu__link_right {
-    @extend .menu__link;
-    color: $text_color
-  }
-  .menu__link_feat {
-    padding-top: 1em;
-    @extend %feature;
-  }
+}
+.menu__block {
+  padding: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.menu__block_left {
+  @extend .menu__block;
+  float: left;
+  width: 62.5%;
+}
+.menu__block_right {
+  @extend .menu__block;
+  float: left;
+  width: 37.5%;
+  min-height: 254px;
+  border-left: 1px solid $border_color;
+  text-transform: capitalize;
+  font-size: 10px;
+}
+.menu__block_middle {
+  @extend .menu__block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.menu__link {
+  padding: .6em 0;
+  color: fade-in($text_color, .4);
+}
+.menu__link_right {
+  @extend .menu__link;
+  color: $text_color
+}
+.menu__link_feat {
+  padding-top: 1em;
+  color: #caad2d;
 }
 
 /* ------------------------------------ search
@@ -143,118 +147,163 @@ a {
   border-bottom: 1px solid $border_color;
   padding: 16px;
   clear: both; //clear floats before so its style dont bleed onto the top header - background-color
-  .search__input {
-    width: 100%;
-    padding: 4px 0;
+}
+.search__input {
+  width: 100%;
+  padding: 4px 0;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: $border_color;
+  background: transparent;
+  font-size: 1.05rem;
+  letter-spacing: .01rem;
+  color: $text_color_light;
+  outline: 0;
+  transition: border-color 0.15s linear;
+  &:focus {
     border-width: 0 0 1px;
     border-style: solid;
-    border-color: $border_color;
-    background: transparent;
-    font-size: 1.05rem;
-    letter-spacing: .01rem;
-    color: $text_color_light;
-    outline: 0;
-    transition: border-color 0.15s linear;
-    &:focus {
-      border-width: 0 0 1px;
-      border-style: solid;
-      border-color: $border_color_light;
-    }
+    border-color: $border_color_light;
   }
 }
-/* ------------------------------------ hero
+
+/* ------------------------------------ items
 */
 
-.hero {
-  background-color: $background_color_elements;
-  .hero__text {
-    padding: 16px 12px;
-    font-size: 0.8rem;
-    .hero__header {
-      @extend %small-caps-header;
-      padding-bottom: 1px;
-      font-size: 0.65rem;
-    }
-    .hero__ep-title {
-      font-size: 1.1rem;
-      text-transform: capitalize;
-      font-weight: 300;
-      letter-spacing: 0.021em;
-      color: #fff;
-    }
-    .hero__synop {
-      padding: 16px 0;
-      font-weight: 300;
-      color: $text_color_light;
-    }
-  }
+.movies {
+  padding: 0 20px; //padding of above wrapper is 8px and schedule is 12px
+  margin-bottom: 24px;
+  border-top: 1px solid $border_color;
+}
+.movie__content {
+  padding-top: 16px;
+  margin-bottom: 24px;
+  font-size: 0.8rem;
+}
+.movie__header {
+  @extend %small-caps-header;
+  padding-bottom: 1px;
+  font-size: 0.65rem;
+}
+.movie__ep-title {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  letter-spacing: 0.021em;
+  color: #fff;
+}
+.movie__text {
+  padding: 10px 0 12px;
+  font-weight: 300;
+  color: $text_color_light;
 }
 
-/* ------------------------------------ feature__link
+/* ------------------------------------ feature items
+*/
+
+.feature__content {
+  padding: 16px 12px;
+  font-size: 0.8rem;
+  background-color: $background_color_elements;
+}
+.feature__header {
+  @extend %small-caps-header;
+  font-size: 0.7rem;
+  color: #a99026;
+  &:hover {
+    color: #caad2d;
+  }
+}
+.feature__text {
+  padding: 12px 0;
+  font-weight: 300;
+}
+
+/* ------------------------------------ feature links
 */
 
 .feature__link {
-  @extend %feature;
   text-align: right;
-  .feature__link_text {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 0.62rem;
-    letter-spacing: 0.12rem;
-    line-height: 1.5rem;
-    height: 1.5rem;
-    text-transform: uppercase;
-  }
-  .feature__link_arrow {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 1.2em;
-    line-height: 1.5rem;
-    height: 1.5rem;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  color: #a99026;
+  &:hover {
+    color: #caad2d;
   }
 }
+.feature__link_text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.62rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+}
+.feature__link_arrow {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.2em;
+}
+
 
 /* ------------------------------------ schedule
 */
 
 .schedule {
-  padding: 16px 12px;
-  .schedule__header {
-    @extend %feature;
-    @extend %small-caps-header;
-    font-size: 0.7rem;
-  }
-  .schedule__item {
-    padding: 12px 0;
-    border-bottom: 1px solid $border_color;
-    font-size: 0.8rem;
-    font-weight: 300;
-    .schedule__time {
-      @extend %small-caps;
-      font-size: 1em;
-      .schedule__time_sup {
-        position: relative;
-        top: -0.27em;
-        font-size: 0.7em;
-      }
-    }
-    .schedule__title {
-      font-size: 1em;
-      color: $text_color_light;
-    }
-  }
-  div:nth-last-of-type(2){
-    border-bottom-color: transparent; //last-of-type doesn't work on class so can't use it directly on .schedule__item
+  padding: 20px 12px 12px;
+}
+.schedule__item {
+  padding: 10px 0;
+  border-bottom: 1px solid $border_color;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.schedule__time {
+  @extend %small-caps;
+  font-size: 1em;
+  .schedule__time_sup {
+    position: relative;
+    top: -0.27em;
+    font-size: 0.7em;
   }
 }
+.schedule__title {
+  font-size: 1em;
+  color: $text_color_light;
+}
+div:nth-last-of-type(1){
+  border-bottom-color: transparent; //last-of-type doesn't work on class so can't use it directly on .schedule__item
+}
 
-/* ------------------------------------ hall
-*/
 
-.hall {
-  padding: 0 16px;
+/* ------------------------------------ channels
+
+footer {
+  padding: 0 8px;
+}
+.channel {
   border-top: 1px solid $border_color;
 }
+.footer__primary {
+  padding: 20px 12px;
+  background-color: $background_color_elements;
+}
+.channel__content {
+  padding: 16px 0;
+}
+.channel__img {
+  width: auto;
+  height: 28px;
+}
+.channel__text {
+  font-size: 0.7rem;
+}
+.channel__link {
+  text-align: left;
+}
+
+*/
+
+
 
 /* ----------------------------- STATES
 */
