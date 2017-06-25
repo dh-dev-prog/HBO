@@ -303,7 +303,8 @@ a {
   text-align: right;
   line-height: 1.5rem;
   height: 1.5rem;
-  color: #a99026; }
+  color: #a99026;
+  cursor: pointer; }
   .feature__link:hover {
     color: #caad2d; }
 
@@ -322,7 +323,7 @@ a {
 /* ------------------------------------ schedule
 */
 .schedule {
-  padding: 20px 12px 12px; }
+  padding: 0 12px; }
 
 .schedule__item {
   padding: 10px 0;

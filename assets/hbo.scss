@@ -227,6 +227,7 @@ a {
   line-height: 1.5rem;
   height: 1.5rem;
   color: #a99026;
+  cursor: pointer;
   &:hover {
     color: #caad2d;
   }
@@ -249,7 +250,7 @@ a {
 */
 
 .schedule {
-  padding: 20px 12px 12px;
+  padding: 0 12px;
 }
 .schedule__item {
   padding: 10px 0;
