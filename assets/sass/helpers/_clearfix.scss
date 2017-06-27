@@ -1,17 +1,17 @@
 /* ------------------------------------ clearfix
 */
 
-.clearfix::before,
-.clearfix::after {
+.group::before,
+.group::after {
   content: "";
   display: table;
 }
 
-.cleafix::after {
+.group::after {
   clear: both;
 }
 
-.clearfix {
+.group {
   clear: both;
   *zoom: 1;
 }

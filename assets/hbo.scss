@@ -3,6 +3,7 @@
 
 // ------------------------------------ helpers
 
+@import "sass/components/icons";
 @import "sass/helpers/reset";
 @import "sass/helpers/clearfix";
 @import "sass/helpers/typo";
@@ -12,7 +13,8 @@
 @import "sass/helpers/placeholders";
 @import "sass/helpers/mixins";
 @import "sass/helpers/images";
-@import "sass/components/icons";
+@import "sass/helpers/features";
+@import "sass/helpers/icons";
 
 /* ----------------------------- BASE
 */
@@ -26,8 +28,8 @@ body {
 }
 a {
   display: block;
-  text-decoration: none;
   color: $text_color;
+  text-decoration: none;
   cursor: pointer;
   &:hover {
     color: $text_color_light;
@@ -37,15 +39,14 @@ a {
 /* ----------------------------- LAYOUT
 */
 
-.wrapper_8 {
+.wrapper {
   padding: 8px;
 }
 
-.light-bg {
-  background-color: $background_color_elements;
-}
-
 /* ----------------------------- MODULES
+*/
+
+/* ---------------------------------------------------------------------- Header
 */
 
 .header {
@@ -73,25 +74,6 @@ a {
   }
 }
 
-/* ------------------------------------ ion icons
-*/
-
-.ion-ios-search-strong {
-  font-size: 20px;
-}
-.ion-ios-circle-outline {
-  font-size: 1.8rem;
-  position: absolute;
-  right: 15px;
-  top: 0px;
-}
-.ion-navicon {
-  font-size: 2.3rem;
-}
-.ion-ios-close-empty {
-  font-size: 3rem;
-}
-
 /* ------------------------------------ menu
 */
 
@@ -104,8 +86,8 @@ a {
 .menu__block {
   padding: 16px;
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .menu__block_left {
   @extend .menu__block;
@@ -117,9 +99,9 @@ a {
   float: left;
   width: 37.5%;
   min-height: 254px;
-  border-left: 1px solid $border_color;
-  text-transform: capitalize;
   font-size: 10px;
+  text-transform: capitalize;
+  border-left: 1px solid $border_color;
 }
 .menu__block_middle {
   @extend .menu__block;
@@ -142,22 +124,23 @@ a {
 
 /* ------------------------------------ search
 */
+
 .search {
+  padding: 16px;
   background-color: $background_color_elements;
   border-bottom: 1px solid $border_color;
-  padding: 16px;
   clear: both; //clear floats before so its style dont bleed onto the top header - background-color
 }
 .search__input {
   width: 100%;
   padding: 4px 0;
+  font-size: 1.05rem;
+  color: $text_color_light;
+  letter-spacing: .01rem;
+  background: transparent;
   border-width: 0 0 1px;
   border-style: solid;
   border-color: $border_color;
-  background: transparent;
-  font-size: 1.05rem;
-  letter-spacing: .01rem;
-  color: $text_color_light;
   outline: 0;
   transition: border-color 0.15s linear;
   &:focus {
@@ -167,84 +150,51 @@ a {
   }
 }
 
-/* ------------------------------------ items
+/* ------------------------------------------------------------------------ Main
 */
 
-.movies {
+.primary-content {
   padding: 0 20px; //padding of above wrapper is 8px and schedule is 12px
   margin-bottom: 24px;
   border-top: 1px solid $border_color;
 }
-.movie__content {
+
+/* ------------------------------------ items
+*/
+
+.item__content {
   padding-top: 16px;
   margin-bottom: 24px;
   font-size: 0.8rem;
 }
-.movie__header {
+.item__header {
   @extend %small-caps-header;
   padding-bottom: 1px;
   font-size: 0.65rem;
 }
-.movie__ep-title {
+.item__title {
   font-size: 1.1rem;
-  text-transform: capitalize;
   font-weight: 300;
-  letter-spacing: 0.021em;
   color: #fff;
+  letter-spacing: 0.021em;
+  text-transform: capitalize;
 }
-.movie__text {
+.item__text {
   padding: 10px 0 12px;
-  font-weight: 300;
   color: $text_color_light;
-}
-
-/* ------------------------------------ feature items
-*/
-
-.feature__content {
-  padding: 16px 12px;
-  font-size: 0.8rem;
-  background-color: $background_color_elements;
-}
-.feature__header {
-  @extend %small-caps-header;
-  font-size: 0.7rem;
-  color: #a99026;
-  &:hover {
-    color: #caad2d;
-  }
-}
-.feature__text {
-  padding: 12px 0;
   font-weight: 300;
 }
 
-/* ------------------------------------ feature links
-*/
-
-.feature__link {
-  text-align: right;
-  line-height: 1.5rem;
-  height: 1.5rem;
-  color: #a99026;
-  cursor: pointer;
-  &:hover {
-    color: #caad2d;
+.item--hero {
+  .item__content {
+    padding: 16px 12px;
+    background-color: $background_color_elements;
+  }
+  .item__text {
+    padding: 12px 0;
+    font-weight: 300;
   }
 }
-.feature__link_text {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 0.62rem;
-  letter-spacing: 0.12rem;
-  text-transform: uppercase;
-}
-.feature__link_arrow {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 1.2em;
-}
-
 
 /* ------------------------------------ schedule
 */
@@ -253,10 +203,10 @@ a {
   padding: 0 12px;
 }
 .schedule__item {
-  padding: 10px 0;
-  border-bottom: 1px solid $border_color;
+  padding: 12px 0;
   font-size: 0.8rem;
   font-weight: 300;
+  border-bottom: 1px solid $border_color;
 }
 .schedule__time {
   @extend %small-caps;
@@ -271,13 +221,16 @@ a {
   font-size: 1em;
   color: $text_color_light;
 }
-div:nth-last-of-type(1){
+li:nth-last-of-type(1){
   border-bottom-color: transparent; //last-of-type doesn't work on class so can't use it directly on .schedule__item
 }
 
+/* ---------------------------------------------------------------------- footer
 
 /* ------------------------------------ channels
+*/
 
+/*
 footer {
   padding: 0 8px;
 }
@@ -301,9 +254,7 @@ footer {
 .channel__link {
   text-align: left;
 }
-
 */
-
 
 
 /* ----------------------------- STATES

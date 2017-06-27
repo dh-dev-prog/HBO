@@ -1,11 +1,11 @@
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /* ------------------------------------ reset
 */
 /* http://meyerweb.com/eric/tools/css/reset/
    2. v2.0 | 20110126 License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
-@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,15 +51,15 @@ table {
 
 /* ------------------------------------ clearfix
 */
-.clearfix::before,
-.clearfix::after {
+.group::before,
+.group::after {
   content: "";
   display: table; }
 
-.cleafix::after {
+.group::after {
   clear: both; }
 
-.clearfix {
+.group {
   clear: both;
   *zoom: 1; }
 
@@ -98,6 +98,8 @@ strong {
 cite, em {
   font-style: italic; }
 
+/* ------------------------------------ variables
+*/
 *,
 *::before,
 *::after {
@@ -105,18 +107,68 @@ cite, em {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.movie__header, .feature__header, .schedule__time {
+/* ------------------------------------ placeholders
+*/
+.feature__header, .item__header, .schedule__time {
   text-transform: uppercase;
   font-variant: small-caps;
   letter-spacing: 0.02em; }
 
-.movie__header, .feature__header {
+.feature__header, .item__header {
   font-weight: 500; }
 
 img, video, embed, object {
   display: block;
   max-width: 100%;
   height: auto; }
+
+/* ------------------------------------ feature header
+*/
+.feature__header {
+  font-size: 0.7rem;
+  color: #a99026; }
+  .feature__header:hover {
+    color: #caad2d; }
+
+/* ------------------------------------ feature links
+*/
+.feature__link {
+  text-align: right;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  color: #a99026;
+  cursor: pointer; }
+  .feature__link:hover {
+    color: #caad2d; }
+
+.feature__link_text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.62rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase; }
+
+.feature__link_arrow {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.2em; }
+
+/* ------------------------------------ ion icons
+*/
+.ion-ios-search-strong {
+  font-size: 20px; }
+
+.ion-ios-circle-outline {
+  font-size: 1.8rem;
+  position: absolute;
+  right: 15px;
+  top: 0px; }
+
+.ion-navicon {
+  font-size: 2.3rem; }
+
+.ion-ios-close-empty {
+  font-size: 3rem; }
 
 /* ----------------------------- BASE
 */
@@ -137,13 +189,12 @@ a {
 
 /* ----------------------------- LAYOUT
 */
-.wrapper_8 {
+.wrapper {
   padding: 8px; }
 
-.light-bg {
-  background-color: #1f1f1f; }
-
 /* ----------------------------- MODULES
+*/
+/* ---------------------------------------------- Header
 */
 .header {
   width: 100vw;
@@ -167,23 +218,6 @@ a {
     width: 65px;
     height: 69px;
     margin: 0 auto; }
-
-/* ------------------------------------ ion icons
-*/
-.ion-ios-search-strong {
-  font-size: 20px; }
-
-.ion-ios-circle-outline {
-  font-size: 1.8rem;
-  position: absolute;
-  right: 15px;
-  top: 0px; }
-
-.ion-navicon {
-  font-size: 2.3rem; }
-
-.ion-ios-close-empty {
-  font-size: 3rem; }
 
 /* ------------------------------------ menu
 */
@@ -252,73 +286,42 @@ a {
     border-style: solid;
     border-color: #484848; }
 
-/* ------------------------------------ items
+/* ---------------------------------------------- Main
 */
-.movies {
+.primary-content {
   padding: 0 20px;
   margin-bottom: 24px;
   border-top: 1px solid #292929; }
 
-.movie__content {
+/* ------------------------------------ items
+*/
+.item__content {
   padding-top: 16px;
   margin-bottom: 24px;
   font-size: 0.8rem; }
 
-.movie__header {
+.item__header {
   padding-bottom: 1px;
   font-size: 0.65rem; }
 
-.movie__ep-title {
+.item__title {
   font-size: 1.1rem;
   text-transform: capitalize;
   font-weight: 300;
   letter-spacing: 0.021em;
   color: #fff; }
 
-.movie__text {
+.item__text {
   padding: 10px 0 12px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.68); }
 
-/* ------------------------------------ feature items
-*/
-.feature__content {
+.item--hero .item__content {
   padding: 16px 12px;
-  font-size: 0.8rem;
   background-color: #1f1f1f; }
-
-.feature__header {
-  font-size: 0.7rem;
-  color: #a99026; }
-  .feature__header:hover {
-    color: #caad2d; }
-
-.feature__text {
+.item--hero .item__text {
   padding: 12px 0;
   font-weight: 300; }
-
-/* ------------------------------------ feature links
-*/
-.feature__link {
-  text-align: right;
-  line-height: 1.5rem;
-  height: 1.5rem;
-  color: #a99026;
-  cursor: pointer; }
-  .feature__link:hover {
-    color: #caad2d; }
-
-.feature__link_text {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 0.62rem;
-  letter-spacing: 0.12rem;
-  text-transform: uppercase; }
-
-.feature__link_arrow {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 1.2em; }
 
 /* ------------------------------------ schedule
 */
@@ -326,7 +329,7 @@ a {
   padding: 0 12px; }
 
 .schedule__item {
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #292929;
   font-size: 0.8rem;
   font-weight: 300; }
@@ -342,7 +345,7 @@ a {
   font-size: 1em;
   color: rgba(255, 255, 255, 0.68); }
 
-div:nth-last-of-type(1) {
+li:nth-last-of-type(1) {
   border-bottom-color: transparent; }
 
 /* ------------------------------------ channels
