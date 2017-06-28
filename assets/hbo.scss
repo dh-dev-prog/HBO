@@ -230,32 +230,42 @@ li:nth-last-of-type(1){
 /* ------------------------------------ channels
 */
 
-/*
-footer {
-  padding: 0 8px;
-}
-.channel {
-  border-top: 1px solid $border_color;
-}
-.footer__primary {
-  padding: 20px 12px;
+.footer__channel {
+  margin: 0 8px;
+  padding: 16px 12px;
   background-color: $background_color_elements;
 }
-.channel__content {
-  padding: 16px 0;
+.chan__header {
+  margin-bottom: 12px;
 }
-.channel__img {
+.chan__intro {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.chan__item {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid $border_color;
+}
+.chan__img {
+  height: 26px;
   width: auto;
-  height: 28px;
 }
-.channel__text {
+.chan__text {
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 0.7rem;
+  font-weight: 300;
 }
-.channel__link {
+.chan__link {
   text-align: left;
+  line-height: 0.62rem;
+  height: 0.62rem;
+  .feature__link_arrow {
+    position: relative;
+    top: -0.35rem;
+  }
 }
-*/
-
 
 /* ----------------------------- STATES
 */
