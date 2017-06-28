@@ -206,7 +206,7 @@ a {
   padding: 12px 0;
   font-size: 0.8rem;
   font-weight: 300;
-  border-bottom: 1px solid $border_color;
+  border-bottom: 1px solid $border_ultra_light;
 }
 .schedule__time {
   @extend %small-caps;

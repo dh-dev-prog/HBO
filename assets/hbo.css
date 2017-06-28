@@ -181,8 +181,8 @@ body {
 
 a {
   display: block;
-  text-decoration: none;
   color: rgba(255, 255, 255, 0.48);
+  text-decoration: none;
   cursor: pointer; }
   a:hover {
     color: rgba(255, 255, 255, 0.68); }
@@ -194,7 +194,7 @@ a {
 
 /* ----------------------------- MODULES
 */
-/* ---------------------------------------------- Header
+/* ---------------------------------------------------------------------- Header
 */
 .header {
   width: 100vw;
@@ -230,8 +230,8 @@ a {
 .menu__block, .menu__block_left, .menu__block_right, .menu__block_middle {
   padding: 16px;
   font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  text-transform: uppercase; }
 
 .menu__block_left {
   float: left;
@@ -241,9 +241,9 @@ a {
   float: left;
   width: 37.5%;
   min-height: 254px;
-  border-left: 1px solid #292929;
+  font-size: 10px;
   text-transform: capitalize;
-  font-size: 10px; }
+  border-left: 1px solid #292929; }
 
 .menu__block_middle {
   position: absolute;
@@ -264,21 +264,21 @@ a {
 /* ------------------------------------ search
 */
 .search {
+  padding: 16px;
   background-color: #1f1f1f;
   border-bottom: 1px solid #292929;
-  padding: 16px;
   clear: both; }
 
 .search__input {
   width: 100%;
   padding: 4px 0;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.68);
+  letter-spacing: .01rem;
+  background: transparent;
   border-width: 0 0 1px;
   border-style: solid;
   border-color: #292929;
-  background: transparent;
-  font-size: 1.05rem;
-  letter-spacing: .01rem;
-  color: rgba(255, 255, 255, 0.68);
   outline: 0;
   transition: border-color 0.15s linear; }
   .search__input:focus {
@@ -286,7 +286,7 @@ a {
     border-style: solid;
     border-color: #484848; }
 
-/* ---------------------------------------------- Main
+/* ------------------------------------------------------------------------ Main
 */
 .primary-content {
   padding: 0 20px;
@@ -306,15 +306,15 @@ a {
 
 .item__title {
   font-size: 1.1rem;
-  text-transform: capitalize;
   font-weight: 300;
+  color: #fff;
   letter-spacing: 0.021em;
-  color: #fff; }
+  text-transform: capitalize; }
 
 .item__text {
   padding: 10px 0 12px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.68); }
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 300; }
 
 .item--hero .item__content {
   padding: 16px 12px;
@@ -330,9 +330,9 @@ a {
 
 .schedule__item {
   padding: 12px 0;
-  border-bottom: 1px solid #292929;
   font-size: 0.8rem;
-  font-weight: 300; }
+  font-weight: 300;
+  border-bottom: 1px solid #1f1f1f; }
 
 .schedule__time {
   font-size: 1em; }
@@ -348,8 +348,11 @@ a {
 li:nth-last-of-type(1) {
   border-bottom-color: transparent; }
 
-/* ------------------------------------ channels
+/* ---------------------------------------------------------------------- footer
 
+/* ------------------------------------ channels
+*/
+/*
 footer {
   padding: 0 8px;
 }
@@ -373,7 +376,6 @@ footer {
 .channel__link {
   text-align: left;
 }
-
 */
 /* ----------------------------- STATES
 */
