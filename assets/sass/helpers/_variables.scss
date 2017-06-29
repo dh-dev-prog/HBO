@@ -2,7 +2,7 @@
 */
 
 
-$header_height: 69px;
+$header_height: 61px;
 $header_elem_width: 69px;
 
 $background_color: #0a0a0a;
@@ -14,5 +14,6 @@ $border_ultra_light: #1f1f1f;
 
 $text_color: rgba(255,255,255,.48);
 $text_color_light: fade-in($text_color, 0.2);
+$text_color_dark: fade-out($text_color, 0.1);
 
 $font_Open_sans: 'Open Sans', sans-serif;

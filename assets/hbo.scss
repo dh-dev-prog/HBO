@@ -28,7 +28,7 @@ body {
 }
 a {
   display: block;
-  color: $text_color;
+  color: $text_color_light;
   text-decoration: none;
   cursor: pointer;
   &:hover {
@@ -293,9 +293,39 @@ li:nth-last-of-type(1){
   float: left;
   font-size: 0.8rem;
   font-weight: 300;
-  text-transform: capitalize;
   color: $text_color;
+  text-transform: capitalize;
 }
+
+/* ------------------------------------ copyright
+*/
+.footer__end {
+  padding: 16px 8px;
+}
+.copyright {
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $text_color_dark;
+  word-spacing: 0.1em;
+}
+.footer__nav {
+  margin-top: 12px;
+  .nav__item {
+    float: left;
+    width: 50%;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+    color: $text_color;
+    text-transform: capitalize;
+  }
+  li:nth-of-type(3n),
+  li:last-of-type {
+    width: 100%;
+  }
+}
+
 
 /* ----------------------------- STATES
 */

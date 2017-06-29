@@ -181,7 +181,7 @@ body {
 
 a {
   display: block;
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.68);
   text-decoration: none;
   cursor: pointer; }
   a:hover {
@@ -198,25 +198,25 @@ a {
 */
 .header {
   width: 100vw;
-  height: 69px;
+  height: 61px;
   border-bottom: 1px solid #1f1f1f; }
 
 .header__icon {
   display: block;
   float: left;
   width: 55px;
-  height: 69px;
-  line-height: 69px;
+  height: 61px;
+  line-height: 61px;
   text-align: center; }
 
 .header__logo {
   position: relative;
   float: left;
   width: calc(100% - 2 * 55px);
-  height: 69px; }
+  height: 61px; }
   .header__logo img {
     width: 65px;
-    height: 69px;
+    height: 61px;
     margin: 0 auto; }
 
 /* ------------------------------------ menu
@@ -412,6 +412,32 @@ li:nth-last-of-type(1) {
   font-weight: 300;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.48); }
+
+/* ------------------------------------ copyright
+*/
+.footer__end {
+  padding: 16px 8px; }
+
+.copyright {
+  line-height: 20px;
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.38);
+  word-spacing: 0.1em; }
+
+.footer__nav {
+  margin-top: 12px; }
+  .footer__nav .nav__item {
+    float: left;
+    width: 50%;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.48);
+    text-transform: capitalize; }
+  .footer__nav li:nth-of-type(3n),
+  .footer__nav li:last-of-type {
+    width: 100%; }
 
 /* ----------------------------- STATES
 */
