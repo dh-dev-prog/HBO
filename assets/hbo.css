@@ -349,12 +349,14 @@ li:nth-last-of-type(1) {
   border-bottom-color: transparent; }
 
 /* ---------------------------------------------------------------------- footer
+*/
+.footer__wrapper {
+  margin: 0 8px; }
 
 /* ------------------------------------ channels
 */
 .footer__channel {
-  margin: 0 8px;
-  padding: 16px 12px;
+  padding: 20px 12px;
   background-color: #1f1f1f; }
 
 .chan__header {
@@ -386,6 +388,30 @@ li:nth-last-of-type(1) {
   .chan__link .feature__link_arrow {
     position: relative;
     top: -0.35rem; }
+
+/* ------------------------------------ social
+*/
+.footer__social {
+  padding: 20px 12px;
+  background-color: #1a1a1a; }
+  .footer__social .feature__header {
+    margin-bottom: 16px; }
+
+.social__item {
+  float: left;
+  width: 50%;
+  margin-bottom: 8px; }
+
+.social__img {
+  float: left;
+  margin-right: 12px; }
+
+.social__name {
+  float: left;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.48); }
 
 /* ----------------------------- STATES
 */
