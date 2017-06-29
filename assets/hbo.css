@@ -181,7 +181,7 @@ body {
 
 a {
   display: block;
-  color: rgba(255, 255, 255, 0.48);
+  color: rgba(255, 255, 255, 0.68);
   text-decoration: none;
   cursor: pointer; }
   a:hover {
@@ -198,25 +198,25 @@ a {
 */
 .header {
   width: 100vw;
-  height: 69px;
+  height: 61px;
   border-bottom: 1px solid #1f1f1f; }
 
 .header__icon {
   display: block;
   float: left;
   width: 55px;
-  height: 69px;
-  line-height: 69px;
+  height: 61px;
+  line-height: 61px;
   text-align: center; }
 
 .header__logo {
   position: relative;
   float: left;
   width: calc(100% - 2 * 55px);
-  height: 69px; }
+  height: 61px; }
   .header__logo img {
     width: 65px;
-    height: 69px;
+    height: 61px;
     margin: 0 auto; }
 
 /* ------------------------------------ menu
@@ -332,7 +332,7 @@ a {
   padding: 12px 0;
   font-size: 0.8rem;
   font-weight: 300;
-  border-bottom: 1px solid #1f1f1f; }
+  border-bottom: 1px solid #292929; }
 
 .schedule__time {
   font-size: 1em; }
@@ -349,34 +349,96 @@ li:nth-last-of-type(1) {
   border-bottom-color: transparent; }
 
 /* ---------------------------------------------------------------------- footer
+*/
+.footer__wrapper {
+  margin: 0 8px; }
 
 /* ------------------------------------ channels
 */
-/*
-footer {
-  padding: 0 8px;
-}
-.channel {
-  border-top: 1px solid $border_color;
-}
-.footer__primary {
+.footer__channel {
   padding: 20px 12px;
-  background-color: $background_color_elements;
-}
-.channel__content {
-  padding: 16px 0;
-}
-.channel__img {
-  width: auto;
-  height: 28px;
-}
-.channel__text {
+  background-color: #1f1f1f; }
+
+.chan__header {
+  margin-bottom: 12px; }
+
+.chan__intro {
+  font-size: 0.8rem;
+  font-weight: 300; }
+
+.chan__item {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #292929; }
+
+.chan__img {
+  height: 26px;
+  width: auto; }
+
+.chan__text {
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 0.7rem;
-}
-.channel__link {
+  font-weight: 300; }
+
+.chan__link {
   text-align: left;
-}
+  line-height: 0.62rem;
+  height: 0.62rem; }
+  .chan__link .feature__link_arrow {
+    position: relative;
+    top: -0.35rem; }
+
+/* ------------------------------------ social
 */
+.footer__social {
+  padding: 20px 12px;
+  background-color: #1a1a1a; }
+  .footer__social .feature__header {
+    margin-bottom: 16px; }
+
+.social__item {
+  float: left;
+  width: 50%;
+  margin-bottom: 8px; }
+
+.social__img {
+  float: left;
+  margin-right: 12px; }
+
+.social__name {
+  float: left;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.48); }
+
+/* ------------------------------------ copyright
+*/
+.footer__end {
+  padding: 16px 8px; }
+
+.copyright {
+  line-height: 20px;
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.38);
+  word-spacing: 0.1em; }
+
+.footer__nav {
+  margin-top: 12px; }
+  .footer__nav .nav__item {
+    float: left;
+    width: 50%;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.48);
+    text-transform: capitalize; }
+  .footer__nav li:nth-of-type(3n),
+  .footer__nav li:last-of-type {
+    width: 100%; }
+
 /* ----------------------------- STATES
 */
 .is_hidden {

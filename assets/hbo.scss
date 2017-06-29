@@ -28,7 +28,7 @@ body {
 }
 a {
   display: block;
-  color: $text_color;
+  color: $text_color_light;
   text-decoration: none;
   cursor: pointer;
   &:hover {
@@ -226,35 +226,105 @@ li:nth-last-of-type(1){
 }
 
 /* ---------------------------------------------------------------------- footer
+*/
 
+.footer__wrapper {
+  margin: 0 8px;
+}
 /* ------------------------------------ channels
 */
 
-/*
-footer {
-  padding: 0 8px;
+.footer__channel {
+  padding: 20px 12px;
+  background-color: #1f1f1f;
 }
-.channel {
+.chan__header {
+  margin-bottom: 12px;
+}
+.chan__intro {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.chan__item {
+  margin-top: 16px;
+  padding-top: 16px;
   border-top: 1px solid $border_color;
 }
-.footer__primary {
-  padding: 20px 12px;
-  background-color: $background_color_elements;
-}
-.channel__content {
-  padding: 16px 0;
-}
-.channel__img {
+.chan__img {
+  height: 26px;
   width: auto;
-  height: 28px;
 }
-.channel__text {
+.chan__text {
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 0.7rem;
+  font-weight: 300;
 }
-.channel__link {
+.chan__link {
   text-align: left;
+  line-height: 0.62rem;
+  height: 0.62rem;
+  .feature__link_arrow {
+    position: relative;
+    top: -0.35rem;
+  }
 }
+
+/* ------------------------------------ social
 */
+
+.footer__social {
+  padding: 20px 12px;
+  background-color: #1a1a1a;
+  .feature__header {
+    margin-bottom: 16px;
+  }
+}
+.social__item {
+  float: left;
+  width: 50%;
+  margin-bottom: 8px;
+}
+.social__img {
+  float: left;
+  margin-right: 12px;
+}
+.social__name {
+  float: left;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: $text_color;
+  text-transform: capitalize;
+}
+
+/* ------------------------------------ copyright
+*/
+.footer__end {
+  padding: 16px 8px;
+}
+.copyright {
+  font-size: 11px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $text_color_dark;
+  word-spacing: 0.1em;
+}
+.footer__nav {
+  margin-top: 12px;
+  .nav__item {
+    float: left;
+    width: 50%;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 300;
+    color: $text_color;
+    text-transform: capitalize;
+  }
+  li:nth-of-type(3n),
+  li:last-of-type {
+    width: 100%;
+  }
+}
 
 
 /* ----------------------------- STATES
