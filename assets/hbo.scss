@@ -52,7 +52,11 @@ a {
 .header {
   width: 100vw;
   height: $header_height;
+  background-color: #0a0a0a;
   border-bottom: 1px solid $border_ultra_light;
+}
+.header--menu-open {
+  border-bottom: 1px solid $border_color;
 }
 .header__icon {
   display: block;
@@ -121,6 +125,30 @@ a {
   padding-top: 1em;
   color: #caad2d;
 }
+@media only screen and (min-width:480px) {
+  .menu {
+    height: inherit;
+  }
+  .menu__block_middle,
+  .menu__block_right {
+    position: static;
+    float: left;
+    width: 58%;
+    min-height: 0;
+    border: none;
+  }
+  .menu__block_middle {
+    border-bottom: 1px solid $border_color;
+  }
+  .menu__block_left {
+    width: 42%;
+    border-right: 1px solid $border_color;
+  }
+  .menu__link_feat {
+    padding-top: 0;
+  }
+}
+
 
 /* ------------------------------------ search
 */

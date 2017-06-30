@@ -3,6 +3,7 @@ function initHeader(){
     init: function(){
       this.iconNav = document.getElementById('navIcon');
       this.menu = document.getElementById('menu');
+      this.header = document.querySelector('.header');
       this.iconNav.parentNode.addEventListener('click', function(){
         headerSearch.searchClose();
         headerMenu.navToggle();
@@ -12,6 +13,7 @@ function initHeader(){
       this.iconNav.classList.toggle('ion-navicon');
       this.iconNav.classList.toggle('ion-ios-close-empty');
       this.menu.classList.toggle('is_hidden');
+      this.header.classList.toggle('header--menu-open');
     },
     navClose: function() {
       this.iconNav.classList.remove('ion-ios-close-empty');
