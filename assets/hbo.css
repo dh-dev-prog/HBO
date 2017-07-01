@@ -224,6 +224,59 @@ a {
     height: 28px;
     margin: 0 auto; }
 
+@media only screen and (min-width: 768px) {
+  .headerMain-wrapper {
+    position: relative;
+    height: inherit;
+    border-bottom: none;
+    clear: both; }
+    .headerMain-wrapper::before {
+      content: " ";
+      display: table; }
+    .headerMain-wrapper::after {
+      content: " ";
+      display: table;
+      clear: both; }
+
+  .header__logo {
+    float: left;
+    width: auto;
+    padding: 24px 16px 24px 28px; }
+    .header__logo img {
+      width: 65px;
+      margin: 0; }
+
+  .header__icon {
+    height: auto; }
+
+  .header__icon_nav {
+    display: none; }
+
+  .header__icon_search {
+    position: absolute;
+    line-height: 74px;
+    right: 12px;
+    padding: 0 12px;
+    left: auto; }
+    .header__icon_search .ion-ios-circle-outline {
+      top: 1px; }
+
+  .navUtility-wrapper {
+    display: block;
+    width: 100vw;
+    height: 28px;
+    padding: 0 24px;
+    text-align: right;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #1f1f1f; }
+    .navUtility-wrapper ul {
+      height: 100%; }
+    .navUtility-wrapper li {
+      display: inline-block;
+      line-height: 28px;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.5px; } }
 /* ------------------------------------ menu
 */
 .menu {
@@ -319,59 +372,6 @@ a {
   .menu--open-border {
     border-top: none; }
 
-  .headerMain-wrapper {
-    position: relative;
-    height: inherit;
-    border-bottom: 1px solid #1f1f1f;
-    clear: both; }
-    .headerMain-wrapper::before {
-      content: " ";
-      display: table; }
-    .headerMain-wrapper::after {
-      content: " ";
-      display: table;
-      clear: both; }
-
-  .header__logo {
-    float: left;
-    width: auto;
-    padding: 24px 16px 24px 28px; }
-    .header__logo img {
-      width: 65px;
-      margin: 0; }
-
-  .header__icon {
-    height: auto; }
-
-  .header__icon_nav {
-    display: none; }
-
-  .header__icon_search {
-    position: absolute;
-    line-height: 74px;
-    right: 12px;
-    padding: 0 12px;
-    left: auto; }
-    .header__icon_search .ion-ios-circle-outline {
-      top: 1px; }
-
-  .navUtility-wrapper {
-    display: block;
-    width: 100vw;
-    height: 28px;
-    padding: 0 24px;
-    text-align: right;
-    background-color: #0a0a0a;
-    border-bottom: 1px solid #1f1f1f; }
-    .navUtility-wrapper ul {
-      height: 100%; }
-    .navUtility-wrapper li {
-      display: inline-block;
-      line-height: 28px;
-      font-weight: 300;
-      font-size: 11px;
-      letter-spacing: 0.5px; }
-
   .menu {
     position: static;
     display: block;
@@ -446,7 +446,7 @@ a {
 .primary-content {
   padding: 0 20px;
   margin-bottom: 24px;
-  border-top: 1px solid #292929; }
+  border-top: 1px solid #1f1f1f; }
 
 /* ------------------------------------ items
 */
@@ -471,13 +471,52 @@ a {
   color: rgba(255, 255, 255, 0.68);
   font-weight: 300; }
 
-.item--hero .item__content {
-  padding: 16px 12px;
-  background-color: #1f1f1f; }
-.item--hero .item__text {
-  padding: 12px 0;
-  font-weight: 300; }
+.item--hero {
+  margin-bottom: 24px; }
+  .item--hero .item__content {
+    padding: 16px 12px;
+    background-color: #1f1f1f; }
+  .item--hero .item__text {
+    padding: 12px 0;
+    font-weight: 300; }
 
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 0 16px; }
+
+  .wrapper {
+    padding: 0; }
+
+  .item--hero {
+    position: relative;
+    margin-bottom: 0; }
+    .item--hero .item__content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      height: auto;
+      margin: 0;
+      padding: 32px 24px; }
+    .item--hero img {
+      display: block;
+      width: 70%; }
+
+  .item {
+    float: left;
+    width: calc((100% - 16px)/2);
+    margin-right: 16px; }
+    .item .feature__link {
+      text-align: left; }
+
+  .primary-content {
+    padding: 0; }
+    .primary-content article:nth-of-type(2n) {
+      margin-right: 0; }
+
+  footer {
+    clear: both; } }
 /* ------------------------------------ schedule
 */
 .schedule {
@@ -503,6 +542,28 @@ a {
 li:nth-last-of-type(1) {
   border-bottom-color: transparent; }
 
+@media only screen and (min-width: 768px) {
+  .schedule {
+    padding: 16px 12px; }
+
+  .schedule__header,
+  .schedule__time,
+  .schedule__title,
+  .schedule__item {
+    display: inline-block; }
+
+  .schedule__link {
+    display: none; }
+
+  .schedule__item {
+    margin-left: 8px;
+    padding: 0;
+    font-size: 11px;
+    border-bottom: 0; }
+
+  .schedule__time {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.38); } }
 /* ---------------------------------------------------------------------- footer
 */
 .footer__wrapper {

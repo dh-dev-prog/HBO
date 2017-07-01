@@ -78,6 +78,67 @@ a {
     margin: 0 auto;
   }
 }
+@media only screen and (min-width: 768px) {
+  .headerMain-wrapper {
+    position: relative;
+    height: inherit;
+    border-bottom: none;
+    &::before {
+      content: " ";
+      display: table;
+    }
+    &::after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+    clear: both;
+  }
+  .header__logo {
+    float: left;
+    width: auto;
+    padding: 24px 16px 24px 28px;
+    img {
+      width: 65px;
+      margin: 0;
+    }
+  }
+  .header__icon {
+    height: auto;
+  }
+  .header__icon_nav {
+    display: none;
+  }
+  .header__icon_search {
+    position: absolute;
+    line-height: 74px;
+    right: 12px;
+    padding: 0 12px;
+    left: auto;
+    .ion-ios-circle-outline {
+      top: 1px;
+    }
+  }
+  .navUtility-wrapper {
+    display: block;
+    width: 100vw;
+    height: 28px;
+    padding: 0 24px;
+    text-align: right;
+    background-color: $background_color;
+    border-bottom: 1px solid $border_ultra_light;
+    ul {
+      height: 100%;
+    }
+    li {
+      display: inline-block;
+      line-height: 28px;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
 
 /* ------------------------------------ menu
 */
@@ -185,65 +246,6 @@ a {
   .menu--open-border {
     border-top: none;
   }
-  .headerMain-wrapper {
-    position: relative;
-    height: inherit;
-    border-bottom: 1px solid $border_ultra_light;
-    &::before {
-      content: " ";
-      display: table;
-    }
-    &::after {
-      content: " ";
-      display: table;
-      clear: both;
-    }
-    clear: both;
-  }
-  .header__logo {
-    float: left;
-    width: auto;
-    padding: 24px 16px 24px 28px;
-    img {
-      width: 65px;
-      margin: 0;
-    }
-  }
-  .header__icon {
-    height: auto;
-  }
-  .header__icon_nav {
-    display: none;
-  }
-  .header__icon_search {
-    position: absolute;
-    line-height: 74px;
-    right: 12px;
-    padding: 0 12px;
-    left: auto;
-    .ion-ios-circle-outline {
-      top: 1px;
-    }
-  }
-  .navUtility-wrapper {
-    display: block;
-    width: 100vw;
-    height: 28px;
-    padding: 0 24px;
-    text-align: right;
-    background-color: $background_color;
-    border-bottom: 1px solid $border_ultra_light;
-    ul {
-      height: 100%;
-    }
-    li {
-      display: inline-block;
-      line-height: 28px;
-      font-weight: 300;
-      font-size: 11px;
-      letter-spacing: 0.5px;
-    }
-  }
   .menu {
     position: static;
     display: block;
@@ -291,7 +293,6 @@ a {
   .menu__block_right {
     display: none;
   }
-
 }
 
 /* ------------------------------------ search
@@ -328,7 +329,7 @@ a {
 .primary-content {
   padding: 0 20px; //padding of above wrapper is 8px and schedule is 12px
   margin-bottom: 24px;
-  border-top: 1px solid $border_color;
+  border-top: 1px solid $border_ultra_light;
 }
 
 /* ------------------------------------ items
@@ -358,6 +359,7 @@ a {
 }
 
 .item--hero {
+  margin-bottom: 24px;
   .item__content {
     padding: 16px 12px;
     background-color: $background_color_elements;
@@ -365,6 +367,49 @@ a {
   .item__text {
     padding: 12px 0;
     font-weight: 300;
+  }
+}
+@media only screen and(min-width: 768px) {
+  main {
+    padding: 0 16px;
+  }
+  .wrapper {
+    padding: 0;
+  }
+  .item--hero {
+    position: relative;
+    margin-bottom: 0;
+    .item__content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      height: auto;
+      margin: 0;
+      padding: 32px 24px;
+    }
+    img {
+      display: block;
+      width: 70%;
+    }
+  }
+  .item {
+    float: left;
+    width: calc((100% - 16px)/2);
+    margin-right: 16px;
+    .feature__link {
+      text-align: left;
+    }
+  }
+  .primary-content {
+    padding: 0;
+    article:nth-of-type(2n) {
+      margin-right: 0;
+    };
+  }
+  footer {
+    clear: both;
   }
 }
 
@@ -397,6 +442,30 @@ li:nth-last-of-type(1){
   border-bottom-color: transparent; //last-of-type doesn't work on class so can't use it directly on .schedule__item
 }
 
+@media only screen and(min-width: 768px) {
+  .schedule {
+    padding: 16px 12px;
+  }
+  .schedule__header,
+  .schedule__time,
+  .schedule__title,
+  .schedule__item {
+    display: inline-block;
+  }
+  .schedule__link {
+    display: none;
+  }
+  .schedule__item {
+    margin-left: 8px;
+    padding: 0;
+    font-size: 11px;
+    border-bottom: 0;
+  }
+  .schedule__time {
+    font-weight: 500;
+    color: $text_color_dark;
+  }
+}
 /* ---------------------------------------------------------------------- footer
 */
 
