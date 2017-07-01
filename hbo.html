@@ -7,48 +7,56 @@
     <link rel="stylesheet" href="assets/hbo.css">
   </head>
   <body>
-    <header>
-      <div class="header group">
-        <div class="header__icon">
-          <a href="#"><i class="icon ion-navicon" id="navIcon"></i></a>
-        </div>
+    <header class="group">
+      <div class="header__icon header__icon_nav">
+        <a href="#"><i class="icon ion-navicon" id="navIcon"></i></a>
+      </div>
+      <div class="navUtility-wrapper">
+        <nav>
+          <ul>
+            <li><a class="menu__link_right" href="#"> Order HBO </a></li>
+            <li><a class="menu__link_right" href="#"> HBO NOW </a></li>
+            <li><a class="menu__link_right" href="#"> HBO GO </a></li>
+            <li><a class="menu__link_right" href="#"> Schedule </a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="headerMain-wrapper group">
         <div class="header__logo">
           <a href="#"><img src="assets/images/logo.svg"></a>
         </div>
-        <div class="header__icon">
+        <div class="menu group" id="menu">
+          <div class="menu__block_left">
+            <nav>
+              <ul>
+                <li><a class="menu__link" href="#"> Series </a></li>
+                <li><a class="menu__link" href="#"> Sports </a></li>
+                <li><a class="menu__link" href="#"> Documentaries </a></li>
+                <li><a class="menu__link" href="#"> Comedy </a></li>
+                <li><a class="menu__link" href="#"> Movies </a></li>
+                <li><a class="menu__link" href="#"> Kids <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="menu__block_middle">
+            <a href="#" class="menu__link_feat">Free Episodes</a>
+          </div>
+          <div class="menu__block_right">
+            <nav>
+              <ul>
+                <li><a class="menu__link_right" href="#"> Order HBO </a></li>
+                <li><a class="menu__link_right" href="#"> HBO NOW </a></li>
+                <li><a class="menu__link_right" href="#"> HBO GO </a></li>
+                <li><a class="menu__link_right" href="#"> Schedule </a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__icon header__icon_search">
           <a href="#">
-            <div>
-              <i class="icon ion-ios-search-strong" id="searchIcon"></i>
-              <i class="icon ion-ios-circle-outline" id="searchCircle"></i>
-            </div>
+            <i class="icon ion-ios-search-strong" id="searchIcon"></i>
+            <i class="icon ion-ios-circle-outline" id="searchCircle"></i>
           </a>
-        </div>
-      </div>
-      <div class="menu is_hidden group" id="menu">
-        <div class="menu__block_left">
-          <nav>
-            <ul>
-              <li><a class="menu__link" href="#"> Series </a></li>
-              <li><a class="menu__link" href="#"> Sports </a></li>
-              <li><a class="menu__link" href="#"> Documentaries </a></li>
-              <li><a class="menu__link" href="#"> Comedy </a></li>
-              <li><a class="menu__link" href="#"> Movies </a></li>
-              <li><a class="menu__link" href="#"> Kids <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="menu__block_middle">
-          <a href="#" class="menu__link_feat">Free Episodes</a>
-        </div>
-        <div class="menu__block_right">
-          <nav>
-            <ul>
-              <li><a class="menu__link_right" href="#"> Order HBO </a></li>
-              <li><a class="menu__link_right" href="#"> HBO NOW </a></li>
-              <li><a class="menu__link_right" href="#"> HBO GO </a></li>
-              <li><a class="menu__link_right" href="#"> Schedule </a></li>
-            </ul>
-          </nav>
         </div>
       </div>
       <div class="search is_hidden" id="searchBar">

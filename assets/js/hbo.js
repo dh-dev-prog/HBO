@@ -1,26 +1,37 @@
 function initHeader(){
+
   var headerMenu = {
     init: function(){
-      this.iconNav = document.getElementById('navIcon');
+      this.navIcon = document.getElementById('navIcon');
       this.menu = document.getElementById('menu');
-      this.header = document.querySelector('.header');
-      this.iconNav.parentNode.addEventListener('click', function(){
+      this.header = document.querySelector('.headerMain-wrapper');
+
+      this.navIcon.parentNode.addEventListener('click', function(){
         headerSearch.searchClose();
         headerMenu.navToggle();
       });
+      this.largeWindow();
     },
     navToggle: function(){
-      this.iconNav.classList.toggle('ion-navicon');
-      this.iconNav.classList.toggle('ion-ios-close-empty');
-      this.menu.classList.toggle('is_hidden');
-      this.header.classList.toggle('header--menu-open');
+      this.navIcon.classList.toggle('ion-navicon');
+      this.navIcon.classList.toggle('ion-ios-close-empty');
+      this.menu.classList.toggle('menu--open');
+      this.header.classList.toggle('header__menu_open_border');
     },
     navClose: function() {
-      this.iconNav.classList.remove('ion-ios-close-empty');
-      this.iconNav.classList.add('ion-navicon');
-      this.menu.classList.add('is_hidden');
+      if(window.innerWidth < '768') {
+        this.navIcon.classList.remove('ion-ios-close-empty');
+        this.navIcon.classList.add('ion-navicon');
+        this.menu.classList.add('is_hidden');
+      }
+    },
+    largeWindow: function(){
+      if(window.innerWidth >= '768') {  //at parse time
+        this.menu.classList.remove('group');
+      }
     }
   };
+
   var headerSearch = {
     init: function(){
       this.iconSearch = document.getElementById('searchIcon');
@@ -56,6 +67,8 @@ function initFooter(){
   year = year.getFullYear();
   copyright.textContent = ' ' + year + ' ';
 }
+
+
 
 initHeader();
 initFooter();
