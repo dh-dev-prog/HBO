@@ -5,30 +5,22 @@ function initHeader(){
       this.navIcon = document.getElementById('navIcon');
       this.menu = document.getElementById('menu');
       this.header = document.querySelector('.headerMain-wrapper');
-
       this.navIcon.parentNode.addEventListener('click', function(){
         headerSearch.searchClose();
         headerMenu.navToggle();
       });
-      this.largeWindow();
     },
     navToggle: function(){
       this.navIcon.classList.toggle('ion-navicon');
       this.navIcon.classList.toggle('ion-ios-close-empty');
       this.menu.classList.toggle('menu--open');
-      this.header.classList.toggle('header__menu_open_border');
+      this.menu.classList.toggle('menu--open-border');
     },
     navClose: function() {
-      if(window.innerWidth < '768') {
-        this.navIcon.classList.remove('ion-ios-close-empty');
-        this.navIcon.classList.add('ion-navicon');
-        this.menu.classList.add('is_hidden');
-      }
-    },
-    largeWindow: function(){
-      if(window.innerWidth >= '768') {  //at parse time
-        this.menu.classList.remove('group');
-      }
+      this.navIcon.classList.remove('ion-ios-close-empty');
+      this.navIcon.classList.add('ion-navicon');
+      this.menu.classList.remove('menu--open');
+      this.menu.classList.remove('menu--open-border');
     }
   };
 

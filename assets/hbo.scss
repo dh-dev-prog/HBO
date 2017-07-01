@@ -57,9 +57,6 @@ a {
 .navUtility-wrapper {
   display: none;
 }
-.header__menu_open_border {
-  border-bottom: 1px solid $border_color;
-}
 .header__icon {
   position: absolute;
   display: block;
@@ -88,12 +85,27 @@ a {
 .menu {
   position: relative;
   display: none;
-  height: 254px;
   background-color: $background_color_elements;
   border-bottom: 1px solid $border_color;
 }
 .menu--open {
-  display: block
+  display: block;
+  &::before {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  clear: both;
+}
+.menu--open-border {
+  border-top: 1px solid $border_color;
+}
+.menu--open-header-border {
+  border-bottom: none;
 }
 .menu__block {
   padding: 16px;
@@ -134,6 +146,9 @@ a {
   color: #caad2d;
 }
 @media only screen and (min-width:480px) {
+  .menu--open {
+    display: block;
+  }
   .menu__block_middle,
   .menu__block_right {
     position: static;
@@ -155,9 +170,33 @@ a {
   }
 }
 @media only screen and (min-width:768px) {
+  .menu--open {
+    display: block;
+    &::before,
+    &::after {
+      content: none;
+      clear: none;
+      display: none;
+    }
+    clear: none;
+  }
+  .menu--open-border {
+    border-top: none;
+  }
   .headerMain-wrapper {
     position: relative;
     height: inherit;
+    border-bottom: 1px solid $border_ultra_light;
+    &::before {
+      content: " ";
+      display: table;
+    }
+    &::after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+    clear: both;
   }
   .header__logo {
     float: left;
@@ -250,6 +289,7 @@ a {
   .menu__block_right {
     display: none;
   }
+
 }
 
 /* ------------------------------------ search
