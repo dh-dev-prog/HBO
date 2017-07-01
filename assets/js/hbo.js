@@ -15,12 +15,14 @@ function initHeader(){
       this.navIcon.classList.toggle('ion-ios-close-empty');
       this.menu.classList.toggle('menu--open');
       this.menu.classList.toggle('menu--open-border');
+      this.header.classList.toggle('menu--open-header-border');
     },
     navClose: function() {
       this.navIcon.classList.remove('ion-ios-close-empty');
       this.navIcon.classList.add('ion-navicon');
       this.menu.classList.remove('menu--open');
       this.menu.classList.remove('menu--open-border');
+      this.header.classList.remove('menu--open-header-border');
     }
   };
 

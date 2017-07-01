@@ -86,7 +86,6 @@ a {
   position: relative;
   display: none;
   background-color: $background_color_elements;
-  border-bottom: 1px solid $border_color;
 }
 .menu--open {
   display: block;
@@ -103,6 +102,7 @@ a {
 }
 .menu--open-border {
   border-top: 1px solid $border_color;
+  border-bottom: 1px solid $border_color;
 }
 .menu--open-header-border {
   border-bottom: none;
@@ -154,15 +154,17 @@ a {
     position: static;
     float: left;
     width: 58%;
-    min-height: inherit;
     border: none;
+  }
+  .menu__block_right {
+    min-height: inherit;
   }
   .menu__block_middle {
     border-bottom: 1px solid $border_color;
   }
   .menu__block_left {
     width: 42%;
-    height: 254px;
+    height: auto;
     border-right: 1px solid $border_color;
   }
   .menu__link_feat {
