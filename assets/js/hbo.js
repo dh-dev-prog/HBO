@@ -15,6 +15,7 @@ function initHeader(){
       this.navIcon.classList.toggle('ion-ios-close-empty');
       this.menu.classList.toggle('menu--open');
       this.menu.classList.toggle('menu--open-border');
+      this.menu.classList.remove('search--open');
       this.header.classList.toggle('menu--open-header-border');
     },
     navClose: function() {
@@ -41,14 +42,17 @@ function initHeader(){
       this.iconCircle.classList.toggle('ion-ios-circle-outline');
       this.iconSearch.classList.toggle('ion-ios-close-empty');
       this.search.classList.toggle('is_hidden');
-      this.search.querySelector('.search__input').value = '';
-      this.search.querySelector('.search__input').focus();
+      headerMenu.menu.classList.toggle('search--open');
+      document.querySelector('.header__logo').classList.toggle('header__logo_search--open');
+      this.search.querySelector('.search__input').value = ''; //empty the value to clear content
+      this.search.querySelector('.search__input').focus();    //and focus the input
     },
     searchClose: function() {
       this.iconSearch.classList.remove('ion-ios-close-empty');
       this.iconSearch.classList.add('ion-ios-search-strong');
       this.iconCircle.classList.add('ion-ios-circle-outline');
       this.search.classList.add('is_hidden');
+      headerMenu.menu.classList.remove('search--open');
     }
   };
   headerMenu.init();
