@@ -265,7 +265,8 @@ a {
     padding: inherit;
     border-right: none;
     li {
-      display: inline-block;
+      float: left;
+      display: block;
       font-size: 11px;
       font-weight: 400;
       letter-spacing: 1px;
@@ -276,13 +277,33 @@ a {
     }
   }
   .menu__link {
+    position: relative;
+    z-index: 1;
     padding: 0 4px;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 100%;
+      display: block;
+      height: 4px;
+      margin: 0 4px;
+      background-color: #caad2d;
+      content: ' ';
+      transition: all .3s ease;
+    }
+    &:hover,
+    &:active {
+      &::after {
+        right: 0;
+      }
+    }
   }
   .menu__block_middle {
     position: absolute;
-    width: auto;
-    float: none;
     right: 64px;
+    float: none;
+    width: auto;
     padding: 0;
     padding-right: 12px;
     line-height: 76px;
@@ -339,6 +360,60 @@ a {
     border-bottom: none;
   }
 }
+
+/* ------------------------------------ category explorer
+*/
+
+.categoryExplorer {
+  display: none;
+}
+.categoryExplorer--open {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .categoryExplorer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0 16px;
+    background-color: $background_color_elements;
+  }
+  .categoryExplorer--top {
+    height: 60px;
+    padding: 16px;
+  }
+  .categoryExplorer--search {
+    position: relative;
+    width: 33.33%;
+    margin: 0 auto;
+    input[type="text"] {
+      width: 100%;
+      padding-left: 24px;
+      padding-bottom: 4px;
+      font-size: 16px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $border_color;
+      transition: border-bottom-color .3s linear;
+      outline: none;
+      color: white;
+      &:focus {
+        border-bottom-color: $border_color_light;
+      }
+    }
+    i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 16px;
+      font-size: 16px;
+    }
+  }
+}
+
 
 /* ------------------------------------------------------------------------ Main
 */

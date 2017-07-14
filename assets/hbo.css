@@ -391,7 +391,8 @@ a {
     padding: inherit;
     border-right: none; }
     .menu__block_left li {
-      display: inline-block;
+      float: left;
+      display: block;
       font-size: 11px;
       font-weight: 400;
       letter-spacing: 1px;
@@ -400,13 +401,28 @@ a {
         color: rgba(255, 255, 255, 0.68); }
 
   .menu__link, .menu__link_right {
+    position: relative;
+    z-index: 1;
     padding: 0 4px; }
+    .menu__link::after, .menu__link_right::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 100%;
+      display: block;
+      height: 4px;
+      margin: 0 4px;
+      background-color: #caad2d;
+      content: ' ';
+      transition: all .3s ease; }
+    .menu__link:hover::after, .menu__link_right:hover::after, .menu__link:active::after, .menu__link_right:active::after {
+      right: 0; }
 
   .menu__block_middle {
     position: absolute;
-    width: auto;
-    float: none;
     right: 64px;
+    float: none;
+    width: auto;
     padding: 0;
     padding-right: 12px;
     line-height: 76px;
@@ -455,6 +471,51 @@ a {
     padding-top: 24px;
     background-color: transparent;
     border-bottom: none; } }
+/* ------------------------------------ category explorer
+*/
+.categoryExplorer {
+  display: none; }
+
+.categoryExplorer--open {
+  display: block; }
+
+@media only screen and (min-width: 768px) {
+  .categoryExplorer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0 16px;
+    background-color: #1f1f1f; }
+
+  .categoryExplorer--top {
+    height: 60px;
+    padding: 16px; }
+
+  .categoryExplorer--search {
+    position: relative;
+    width: 33.33%;
+    margin: 0 auto; }
+    .categoryExplorer--search input[type="text"] {
+      width: 100%;
+      padding-left: 24px;
+      padding-bottom: 4px;
+      font-size: 16px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #292929;
+      transition: border-bottom-color .3s linear;
+      outline: none;
+      color: white; }
+      .categoryExplorer--search input[type="text"]:focus {
+        border-bottom-color: #484848; }
+    .categoryExplorer--search i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 16px;
+      font-size: 16px; } }
 /* ------------------------------------------------------------------------ Main
 */
 .primary-content {
