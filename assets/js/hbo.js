@@ -28,17 +28,16 @@ function initHeader(){
     },
     linkHover: function(){
       var links = document.getElementsByClassName('menu__link');
+      var explorer = document.querySelector('.categoryExplorer');
+
       Array.prototype.forEach.call(links, function(link) {
         link.addEventListener('mouseover', function(){
-          document.querySelector('.categoryExplorer').classList.add('categoryExplorer--open');
+          explorer.classList.add('categoryExplorer--open');
         });
-        /*
-        link.addEventListener('mouseout', function(){
-          document.querySelector('.categoryExplorer').classList.remove('categoryExplorer--open');
-        })
-        */
       });
-
+      document.querySelector('.headerMain-wrapper').addEventListener('mouseleave', function(){
+        explorer.classList.remove('categoryExplorer--open');
+      })
     }
   };
 

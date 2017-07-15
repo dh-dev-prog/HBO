@@ -42,6 +42,18 @@ a {
 .wrapper {
   padding: 8px;
 }
+.col25 {
+  width: 25%;
+}
+.col33 {
+  width: 33.33%;
+}
+.col50 {
+  width: 50%;
+}
+.col75 {
+  width: 75%;
+}
 
 /* ----------------------------- MODULES
 */
@@ -295,7 +307,7 @@ a {
     &:hover,
     &:active {
       &::after {
-        right: 0;
+        right: 0; //make the border bottom appear
       }
     }
   }
@@ -371,9 +383,10 @@ a {
   display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width:768px) {
   .categoryExplorer {
     position: absolute;
+    top: 76px;
     right: 0;
     left: 0;
     z-index: 1000;
@@ -386,19 +399,20 @@ a {
   }
   .categoryExplorer--search {
     position: relative;
-    width: 33.33%;
+    width: 50%;
     margin: 0 auto;
     input[type="text"] {
       width: 100%;
-      padding-left: 24px;
+      padding-left: 20px;
       padding-bottom: 4px;
-      font-size: 16px;
+      font-size: 13px;
+      letter-spacing: 1px;
       background-color: transparent;
       border: none;
       border-bottom: 1px solid $border_color;
       transition: border-bottom-color .3s linear;
       outline: none;
-      color: white;
+      color: $text_color_light;
       &:focus {
         border-bottom-color: $border_color_light;
       }
@@ -406,7 +420,6 @@ a {
     i {
       position: absolute;
       left: 0;
-      top: 0;
       bottom: 0;
       width: 16px;
       font-size: 16px;
@@ -414,6 +427,50 @@ a {
   }
 }
 
+.categoryExplorer--content {
+  background-color: $background_color_light;
+  &:before, //clear subCategory
+  &:after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+  clear: both;
+}
+.categoryExplorer--subCategory {
+  float: left;
+  padding: 20px 12px;
+  border-left: 1px solid #333;
+  font-size: 0.76rem;
+  font-weight: 300;
+  &:first-child {
+    border-left:none;
+  }
+}
+.subCategory--Title {
+  margin-bottom: 8px;
+  color: #fff;
+}
+.subCategory--List {
+  float: left;
+  text-transform: capitalize;
+  &:first-child {
+    padding-right: 12px;
+  }
+  li {
+    a {
+      padding: 4px 0;
+    }
+  }
+}
+.miniseries {
+  margin-left: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text_color_dark;
+
+}
 
 /* ------------------------------------------------------------------------ Main
 */
