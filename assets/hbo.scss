@@ -63,10 +63,11 @@ a {
 
 .headerMain-wrapper {
   width: 100vw;
-  background-color: #0a0a0a;
+  background-color: $background_color;
 }
 .navUtility-wrapper {
   display: none;
+  background-color: $background_color_dark;
 }
 .header__icon {
   position: absolute;
@@ -453,9 +454,10 @@ a {
 }
 .subCategory--List {
   float: left;
+  padding-right: 16px;
   text-transform: capitalize;
   &:first-child {
-    padding-right: 12px;
+    padding-right: 16px;
   }
   li {
     a {
@@ -464,12 +466,10 @@ a {
   }
 }
 .miniseries {
-  margin-left: 2px;
   font-size: 10px;
   font-weight: 400;
   text-transform: uppercase;
   color: $text_color_dark;
-
 }
 
 /* ------------------------------------------------------------------------ Main
@@ -621,6 +621,13 @@ li:nth-last-of-type(1){
 .footer__wrapper {
   margin: 0 8px;
 }
+@media only screen and (min-width: 768px) {
+  .footer__wrapper {
+    margin: 0;
+    padding: 20px 16px;
+    border-top: 1px solid $border_ultra_light;
+  }
+}
 /* ------------------------------------ channels
 */
 
@@ -686,18 +693,58 @@ li:nth-last-of-type(1){
   color: $text_color;
   text-transform: capitalize;
 }
+@media only screen and (min-width: 768px) {
+  .footer--top {
+    background-color: $background_color_dark;
+  }
+  .footer__channel {
+    float: left;
+    width: 75%;
+    padding: 0 12px 0 0;
+    background-color: transparent;
+  }
+  .chan__item {
+    float: left;
+    width: calc(100% / 3);
+    margin: 20px 0 14px;
+    padding: 0 12px;
+    border-top: none;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  .chan__text {
+    line-height: 2;
+  }
+  .chan__link {
+    height: inherit;
+  }
+  .footer__social {
+    float: left;
+    width: 25%;
+    height: auto;
+    padding: 0 0 0 12px;
+    background-color: transparent;
+  }
+  .social__item {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    clear: both;
+  }
+}
 
 /* ------------------------------------ copyright
 */
 .footer__end {
   padding: 16px 8px;
-}
-.copyright {
-  font-size: 11px;
-  line-height: 20px;
-  font-weight: 300;
-  color: $text_color_dark;
-  word-spacing: 0.1em;
 }
 .footer__nav {
   margin-top: 12px;
@@ -710,13 +757,44 @@ li:nth-last-of-type(1){
     color: $text_color;
     text-transform: capitalize;
   }
-  li:nth-of-type(3n),
+  li:first-child,
+  li:nth-of-type(4n),
   li:last-of-type {
     width: 100%;
   }
+  li:first-child {
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 300;
+    color: $text_color_dark;
+    word-spacing: 0.1em;
+  }
 }
-
-
+@media only screen and (min-width: 768px) {
+  .footer__end {
+    padding: 0;
+  }
+  .footer__nav {
+    margin-top: inherit;
+    .nav__item {
+      display: inline-block;
+      width: inherit;
+      padding-right: 6px;
+      margin-top: inherit;
+      line-height: 3;
+      font-size: 11px;
+    }
+    li:first-child,
+    li:nth-of-type(4n),
+    li:last-of-type {
+      width: inherit;
+    }
+    li:first-child {
+      margin: inherit;
+      color: $text_color_ultra_dark;
+    }
+  }
+}
 /* ----------------------------- STATES
 */
 

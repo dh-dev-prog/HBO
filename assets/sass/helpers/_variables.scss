@@ -5,8 +5,9 @@
 $header_height: 61px;
 $header_elem_width: 69px;
 
-$background_color: #0a0a0a;
+$background_color: #141414;
 $background_color_light: #292929;
+$background_color_dark: #0a0a0a;
 $background_color_elements: #1f1f1f;
 
 $border_color: #292929;
@@ -16,3 +17,4 @@ $border_ultra_light: #1f1f1f;
 $text_color: rgba(255,255,255,.48);
 $text_color_light: fade-in($text_color, 0.2);
 $text_color_dark: fade-out($text_color, 0.1);
+$text_color_ultra_dark: fade-out($text_color, 0.2);
