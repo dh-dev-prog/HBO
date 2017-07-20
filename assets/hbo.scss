@@ -143,11 +143,13 @@ a {
     background-color: $background_color;
     border-bottom: 1px solid $border_ultra_light;
     ul {
-      height: 100%;
+      height: 28px;
     }
     li {
       display: inline-block;
-      line-height: 28px;
+      vertical-align: middle;
+      height: 28px;
+      padding: 0 4px;
       font-weight: 300;
       font-size: 11px;
       letter-spacing: 0.5px;
@@ -219,6 +221,9 @@ a {
 .menu__link_feat {
   padding-top: 1em;
   color: #caad2d;
+  &:hover {
+    color: #caad2d;
+  }
 }
 @media only screen and (min-width:480px) {
   .menu--open {
@@ -268,6 +273,29 @@ a {
     height: inherit;
     background-color: transparent;
     border-bottom: none;
+    .menu__link {
+      position: relative;
+      z-index: 1;
+      padding: 0 4px;
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 100%;
+        display: block;
+        height: 4px;
+        margin: 0 4px;
+        background-color: #caad2d;
+        content: ' ';
+        transition: all .3s ease;
+      }
+      &:hover,
+      &:active {
+        &::after {
+          right: 0; //make the border bottom appear
+        }
+      }
+    }
   }
   .menu__block_left {
     position: static;
@@ -285,29 +313,6 @@ a {
       line-height: 76px;
       a {
         color: $text_color_light;
-      }
-    }
-  }
-  .menu__link {
-    position: relative;
-    z-index: 1;
-    padding: 0 4px;
-    &::after {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      right: 100%;
-      display: block;
-      height: 4px;
-      margin: 0 4px;
-      background-color: #caad2d;
-      content: ' ';
-      transition: all .3s ease;
-    }
-    &:hover,
-    &:active {
-      &::after {
-        right: 0; //make the border bottom appear
       }
     }
   }
@@ -379,11 +384,11 @@ a {
 .categoryExplorer {
   display: none;
 }
-.categoryExplorer--open {
-  display: block;
-}
 
 @media only screen and (min-width:768px) {
+  .categoryExplorer--open {
+    display: block;
+  }
   .categoryExplorer {
     position: absolute;
     top: 76px;
@@ -479,6 +484,11 @@ a {
   margin-bottom: 24px;
   border-top: 1px solid $border_ultra_light;
 }
+@media only screen and (min-width: 768px) {
+  .primary-content {
+    border-top: none;
+  }
+}
 
 /* ------------------------------------ items
 */
@@ -535,11 +545,14 @@ a {
       width: 30%;
       height: auto;
       margin: 0;
-      padding: 32px 24px;
+      padding: 16px 12px;
     }
     img {
       display: block;
       width: 70%;
+    }
+    .feature__link {
+      text-align: left;
     }
   }
   .item {
@@ -591,14 +604,30 @@ li:nth-last-of-type(1){
 }
 
 @media only screen and(min-width: 768px) {
-  .schedule {
-    padding: 16px 12px;
+  .schedule--wrapper {
+    position: relative;
   }
-  .schedule__header,
+  .schedule {
+    padding: 16px 12px 16px 112px;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    clear:both;
+  }
+  .schedule__header {
+    position: absolute;
+    left: 0;
+    width: 112px;
+    padding: 16px 0;
+  }
   .schedule__time,
   .schedule__title,
   .schedule__item {
-    display: inline-block;
+    float: left;
+    margin-right: 4px;
   }
   .schedule__link {
     display: none;
@@ -717,6 +746,15 @@ li:nth-last-of-type(1){
   }
   .chan__link {
     height: inherit;
+    p {
+      line-height: 16px;
+    }
+    .feature__link_arrow {
+      position: static;
+      height: 16px;
+      line-height: 16px;
+      font-size: 16px;
+    }
   }
   .footer__social {
     float: left;
