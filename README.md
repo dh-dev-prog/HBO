@@ -1,6 +1,6 @@
-INTRO
+INTRO:
 
-By making a copy of the HBO front-page, I wanted - to learn more about media queries and - to create a webpage of an actual responsive website. I tried not to look at the original code except when I didn't know or couldn't understand a technique.
+By making a copy of the HBO front-page, I wanted - to learn more about media queries and - to create a webpage of an actual responsive website.
 
 AFTER - notes, impressions, mistakes, lessons ... :
 
