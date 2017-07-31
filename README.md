@@ -1,8 +1,8 @@
 INTRO:
 
-By making a copy of the HBO front-page, I wanted - to learn more about media queries and - to create a webpage of an actual responsive website.
+By making a copy of the HBO front-page, I wanted to learn more about media queries and I wanted to make a webpage of an actual responsive website.
 
-AFTER - notes, impressions, mistakes, lessons ... :
+AFTER - memo :
 
 First, trying to modify the CSS using javascript can make the whole thing difficult and it is not the purpose of javascript (using style.display, find a breakpoint, etc.). Especially with a responsive website and media queries. Triggering css classes like 'class—open' is way smoother and accurate.
 Styles should stay in css.
